@@ -1,0 +1,137 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+  gap: 18px;
+  height: 100%;
+}
+
+.copyColumn,
+.matrixColumn {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+}
+
+.thesisCard,
+.principleCard,
+.matrixCard,
+.ruleCard {
+  border-radius: 24px;
+  border: 1px solid rgba(236, 224, 207, 0.12);
+  background: rgba(255, 249, 240, 0.06);
+}
+
+.thesisCard,
+.matrixCard,
+.ruleCard {
+  padding: 20px;
+}
+
+.thesisCard h3 {
+  margin: 0 0 10px;
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: 1.32rem;
+}
+
+.thesisCard p,
+.principleCard p,
+.ruleText {
+  margin: 0;
+  color: rgba(243, 235, 223, 0.8);
+  line-height: 1.62;
+  font-size: 0.92rem;
+}
+
+.principles {
+  display: grid;
+  gap: 12px;
+}
+
+.principleCard {
+  padding: 16px;
+}
+
+.principleCard strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #f4ebdd;
+  font-size: 0.92rem;
+}
+
+.matrixTitle,
+.ruleLabel {
+  margin: 0 0 12px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #9fd2c9;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.table th,
+.table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid rgba(236, 224, 207, 0.1);
+  vertical-align: top;
+}
+
+.table thead th {
+  text-align: left;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(243, 235, 223, 0.76);
+}
+
+.table tbody th {
+  width: 148px;
+  text-align: left;
+  color: #f4ebdd;
+  font-weight: 600;
+}
+
+.table td {
+  color: rgba(243, 235, 223, 0.76);
+}
+
+.best {
+  color: #d8fff5;
+  background: rgba(29, 103, 95, 0.14);
+}
+
+.ruleCard {
+  background: linear-gradient(180deg, rgba(29, 103, 95, 0.2), rgba(255, 249, 240, 0.06));
+}
+
+.ruleTags {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ruleTags span {
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(236, 224, 207, 0.14);
+  background: rgba(255, 249, 240, 0.06);
+  color: #f4ebdd;
+  font-size: 0.76rem;
+}
+
+@media (max-width: 920px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+}

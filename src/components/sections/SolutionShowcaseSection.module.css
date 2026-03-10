@@ -1,0 +1,33 @@
+.layout {
+  display: grid;
+  gap: 18px;
+  height: 100%;
+}
+
+.description {
+  margin: -4px 0 0;
+  font-size: 0.92rem;
+  line-height: 1.58;
+  color: var(--ink-muted);
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  align-items: stretch;
+  height: 100%;
+}
+
+.twoUp {
+  grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.78fr);
+}
+
+.single {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 920px) {
+  .twoUp {
+    grid-template-columns: 1fr;
+  }
+}

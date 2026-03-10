@@ -1,0 +1,75 @@
+.card {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  height: 100%;
+  padding: 14px;
+  border-radius: 24px;
+  border: 1px solid rgba(116, 99, 74, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.94), rgba(246, 238, 228, 0.9)),
+    rgba(255, 250, 243, 0.94);
+  box-shadow: 0 18px 34px rgba(30, 26, 20, 0.08);
+}
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(116, 99, 74, 0.12);
+  background: #fcf7ef;
+}
+
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 16%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent 24%);
+  pointer-events: none;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  display: grid;
+  gap: 6px;
+}
+
+.caption strong {
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.caption span {
+  font-size: 0.9rem;
+  line-height: 1.58;
+  color: var(--ink-soft);
+}
+
+.feature .frame {
+  min-height: 340px;
+}
+
+.support .frame {
+  min-height: 250px;
+}
+
+.detail .frame {
+  min-height: 420px;
+}
+
+@media (max-width: 920px) {
+  .feature .frame,
+  .support .frame,
+  .detail .frame {
+    min-height: auto;
+  }
+}

@@ -1,0 +1,129 @@
+.nav {
+  position: fixed;
+  top: calc(var(--header-h) + 12px);
+  left: 16px;
+  bottom: calc(var(--pager-h) + 12px);
+  width: var(--nav-w);
+  z-index: 32;
+}
+
+.panel {
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 28px;
+  border: 1px solid rgba(116, 99, 74, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 243, 0.9), rgba(251, 245, 235, 0.84)),
+    rgba(255, 249, 240, 0.86);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  padding: 18px 14px 16px;
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 4px 14px;
+  border-bottom: 1px solid rgba(116, 99, 74, 0.14);
+}
+
+.label {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.caption {
+  margin: 6px 0 0;
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+
+.closeButton {
+  display: none;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.list {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.link {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  color: #46524c;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.link:hover {
+  transform: translateX(2px);
+  background: rgba(238, 246, 243, 0.74);
+  border-color: rgba(29, 103, 95, 0.16);
+}
+
+.linkActive {
+  background: linear-gradient(180deg, rgba(233, 247, 242, 0.96), rgba(245, 241, 232, 0.92));
+  border-color: rgba(29, 103, 95, 0.32);
+  color: #173f39;
+}
+
+.index {
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: 0.94rem;
+  line-height: 1.4;
+}
+
+.copy {
+  display: grid;
+  gap: 2px;
+}
+
+.copy strong {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.copy em {
+  font-style: normal;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+@media (max-width: 920px) {
+  .nav {
+    top: calc(var(--header-h) + 10px);
+    left: 12px;
+    bottom: 12px;
+    transform: translateX(-116%);
+    transition: transform 220ms ease;
+  }
+
+  .navOpen {
+    transform: translateX(0);
+  }
+
+  .closeButton {
+    display: inline-flex;
+  }
+}

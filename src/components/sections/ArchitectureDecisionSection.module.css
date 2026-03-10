@@ -1,0 +1,102 @@
+.layout {
+  display: grid;
+  gap: 18px;
+  height: 100%;
+}
+
+.description {
+  margin: -4px 0 0;
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  line-height: 1.58;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: 16px;
+  height: 100%;
+}
+
+.figure,
+.sidebar {
+  margin: 0;
+  border-radius: 24px;
+  border: 1px solid rgba(116, 99, 74, 0.16);
+  overflow: hidden;
+}
+
+.figure {
+  background: rgba(255, 250, 243, 0.82);
+  box-shadow: 0 16px 32px rgba(30, 26, 20, 0.08);
+}
+
+.figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar {
+  padding: 20px;
+  background: rgba(255, 251, 246, 0.76);
+}
+
+.sidebar h3 {
+  margin: 0 0 14px;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.decisionGrid {
+  display: grid;
+  gap: 12px;
+}
+
+.decisionCard {
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(116, 99, 74, 0.14);
+  background: rgba(255, 252, 247, 0.86);
+}
+
+.decisionCard strong {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.decisionCard p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.58;
+  color: var(--ink-soft);
+}
+
+:global([data-tone="ink"]) .description,
+:global([data-tone="ink"]) .decisionCard p {
+  color: rgba(243, 235, 223, 0.78);
+}
+
+:global([data-tone="ink"]) .sidebar {
+  background: rgba(255, 249, 240, 0.06);
+  border-color: rgba(236, 224, 207, 0.12);
+}
+
+:global([data-tone="ink"]) .figure {
+  border-color: rgba(236, 224, 207, 0.12);
+  background: rgba(255, 249, 240, 0.06);
+}
+
+:global([data-tone="ink"]) .decisionCard {
+  background: rgba(255, 249, 240, 0.04);
+  border-color: rgba(236, 224, 207, 0.1);
+}
+
+@media (max-width: 920px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+}
