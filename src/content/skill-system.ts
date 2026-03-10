@@ -79,7 +79,7 @@ export const skillSystemArchitecture: ArchitectureSectionContent = {
   tone: "linen",
   lead: "下面四个关键设计，决定了 Skill Insight 如何稳定运行，并进入真实对话链路。",
   image: {
-    src: "/images/skill-system-architecture-placeholder.png",
+    src: "/images/skill-system-architecture.svg",
     alt: "Skill System 架构流程图"
   },
   decisions: [

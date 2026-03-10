@@ -14,11 +14,11 @@ export function SideNav({ sections, activeId, navOpen, onCloseNav }: SideNavProp
       <div className={styles.panel}>
         <div className={styles.head}>
           <div>
-            <p className={styles.label}>Sections</p>
-            <p className={styles.caption}>Editorial Boardroom flow</p>
+            <p className={styles.label}>目录</p>
+            <p className={styles.caption}>11-page product case study</p>
           </div>
           <button className={styles.closeButton} type="button" onClick={onCloseNav}>
-            Close
+            关闭
           </button>
         </div>
 

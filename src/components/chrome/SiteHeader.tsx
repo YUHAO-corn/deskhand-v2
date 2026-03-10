@@ -9,9 +9,9 @@ export function SiteHeader({ onOpenNav }: SiteHeaderProps) {
     <header className={styles.header}>
       <div className={styles.inner}>
         <div className={styles.brandBlock}>
-          <p className={styles.kicker}>Showcase V2</p>
+          <p className={styles.kicker}>Deskhand Case Study</p>
           <a href="#hero" className={styles.title}>
-            Deskhand / Yuhao
+            Deskhand
           </a>
         </div>
 
@@ -19,16 +19,13 @@ export function SiteHeader({ onOpenNav }: SiteHeaderProps) {
           <a className={styles.linkChip} href="https://github.com/YUHAO-corn" target="_blank" rel="noreferrer">
             GitHub
           </a>
-          <a className={styles.linkChip} href="mailto:yuhao@example.com">
-            Email
-          </a>
-          <a className={`${styles.linkChip} ${styles.linkStrong}`} href="/resume.txt" download>
-            Resume
+          <a className={`${styles.linkChip} ${styles.linkStrong}`} href="#why-desktop">
+            Decision
           </a>
         </nav>
 
         <button className={styles.menuButton} type="button" onClick={onOpenNav}>
-          Sections
+          目录
         </button>
       </div>
     </header>

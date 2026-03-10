@@ -2,7 +2,7 @@ import type { ComparisonMatrixSectionContent } from "../types/content";
 
 export const whyDesktopSection: ComparisonMatrixSectionContent = {
   id: "why-desktop",
-  navLabel: "Why Desktop",
+  navLabel: "Desktop",
   title: "为什么是桌面应用，而不是 CLI 或 Web？",
   kicker: "Form Factor Decision",
   pageType: "comparisonMatrix",

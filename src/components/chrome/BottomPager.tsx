@@ -19,10 +19,10 @@ export function BottomPager({ sections, activeId }: BottomPagerProps) {
       <div className={styles.inner}>
         {previous ? (
           <a className={styles.button} href={`#${previous.id}`}>
-            Prev
+            上一页
           </a>
         ) : (
-          <span className={`${styles.button} ${styles.disabled}`}>Prev</span>
+          <span className={`${styles.button} ${styles.disabled}`}>上一页</span>
         )}
 
         <p className={styles.status}>
@@ -34,10 +34,10 @@ export function BottomPager({ sections, activeId }: BottomPagerProps) {
 
         {next ? (
           <a className={`${styles.button} ${styles.buttonStrong}`} href={`#${next.id}`}>
-            Next
+            下一页
           </a>
         ) : (
-          <span className={`${styles.button} ${styles.disabled}`}>Next</span>
+          <span className={`${styles.button} ${styles.disabled}`}>下一页</span>
         )}
       </div>
     </div>

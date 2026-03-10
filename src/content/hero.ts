@@ -2,7 +2,7 @@ import type { HeroSectionContent } from "../types/content";
 
 export const heroSection: HeroSectionContent = {
   id: "hero",
-  navLabel: "Home",
+  navLabel: "Intro",
   title: "Deskhand",
   kicker: "Project overview",
   pageType: "hero",

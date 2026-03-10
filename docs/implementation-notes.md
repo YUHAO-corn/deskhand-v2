@@ -16,6 +16,6 @@
 
 ## 后续可继续打磨
 
-- Skill System 架构图可替换为正式图稿
+- Skill System 架构图已替换为本地正式 SVG 图稿，后续可继续做品牌化视觉升级
 - 可补充结尾 CTA 页
 - 可继续统一 section 之间的 page number / footer 文案节奏
