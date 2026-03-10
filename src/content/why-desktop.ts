@@ -6,7 +6,7 @@ export const whyDesktopSection: ComparisonMatrixSectionContent = {
   title: "为什么是桌面应用，而不是 CLI 或 Web？",
   kicker: "Form Factor Decision",
   pageType: "comparisonMatrix",
-  tone: "ink",
+  tone: "linen",
   lead: "我们不是在选一个技术栈，而是在决定：非技术用户和 Agent 协作时，哪里是安全边界，哪里是操作主场。",
   thesis: {
     title: "核心判断",

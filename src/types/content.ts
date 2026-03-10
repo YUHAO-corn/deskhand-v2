@@ -22,8 +22,8 @@ export interface MetricItem {
 export interface ScreenAsset {
   src: string;
   alt: string;
-  title: string;
-  caption: string;
+  title?: string;
+  caption?: string;
   size?: "feature" | "support" | "detail";
 }
 
@@ -31,8 +31,8 @@ export interface HeroSectionContent extends NavMeta {
   pageType: "hero";
   eyebrow: string;
   subtitle: string;
-  summary: string;
-  note: string;
+  summary?: string;
+  note?: string;
   metrics: MetricItem[];
   stack: string[];
   image: ScreenAsset;
@@ -113,7 +113,8 @@ export interface ProblemSplitSectionContent extends NavMeta {
 export interface ShowcaseSectionContent extends NavMeta {
   pageType: "showcase";
   lead: string;
-  description: string;
+  description?: string;
+  layout?: "featured" | "balanced";
   screens: ScreenAsset[];
 }
 
@@ -125,7 +126,7 @@ export interface DecisionCard {
 export interface ArchitectureSectionContent extends NavMeta {
   pageType: "architecture";
   lead: string;
-  description: string;
+  description?: string;
   image: {
     src: string;
     alt: string;

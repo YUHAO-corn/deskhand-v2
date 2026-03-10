@@ -1,20 +1,22 @@
 .grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: clamp(22px, 3vw, 40px);
+  grid-template-columns: minmax(0, 0.76fr) minmax(0, 1.24fr);
+  gap: clamp(18px, 2.4vw, 30px);
   height: 100%;
   align-items: stretch;
+  min-height: 0;
 }
 
 .copy {
   display: grid;
   align-content: space-between;
-  gap: 26px;
+  gap: 18px;
+  min-height: 0;
 }
 
 .copyTop {
   display: grid;
-  gap: 14px;
+  gap: 10px;
 }
 
 .eyebrow {
@@ -29,41 +31,41 @@
 .title {
   margin: 0;
   font-family: "Fraunces", "Noto Serif SC", serif;
-  font-size: clamp(3rem, 7vw, 5.6rem);
+  font-size: clamp(3.2rem, 6.4vw, 5.2rem);
   line-height: 0.92;
   letter-spacing: -0.05em;
 }
 
 .subtitle {
   margin: 0;
-  font-size: clamp(1.05rem, 1.9vw, 1.45rem);
-  line-height: 1.35;
+  font-size: clamp(1.02rem, 1.7vw, 1.32rem);
+  line-height: 1.3;
   color: #2c3733;
-  max-width: 30rem;
+  max-width: 24rem;
 }
 
 .summary {
   margin: 0;
-  max-width: 34rem;
+  max-width: 30rem;
   color: var(--ink-soft);
-  font-size: 0.96rem;
-  line-height: 1.65;
+  font-size: 0.9rem;
+  line-height: 1.56;
 }
 
 .copyBottom {
   display: grid;
-  gap: 20px;
+  gap: 14px;
 }
 
 .metrics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
 .metricCard {
-  padding: 16px 16px 14px;
-  border-radius: 20px;
+  padding: 12px 14px;
+  border-radius: 18px;
   border: 1px solid rgba(116, 99, 74, 0.16);
   background: rgba(255, 251, 245, 0.74);
 }
@@ -82,19 +84,19 @@
 
 .metricCard strong {
   display: block;
-  margin-top: 6px;
+  margin-top: 4px;
   font-family: "Fraunces", "Noto Serif SC", serif;
-  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
 }
 
 .stackBlock {
   display: grid;
-  gap: 14px;
+  gap: 10px;
 }
 
 .note {
   margin: 0;
-  padding: 14px 16px;
+  padding: 12px 14px;
   border-left: 3px solid rgba(178, 122, 69, 0.6);
   background: rgba(246, 236, 224, 0.72);
   color: #564a3e;
@@ -107,29 +109,31 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .stack li {
-  padding: 10px 14px;
+  padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid rgba(116, 99, 74, 0.18);
   background: rgba(255, 251, 246, 0.88);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: #34413c;
 }
 
 .visual {
   position: relative;
   display: grid;
-  align-content: center;
-  gap: 14px;
-  padding: 32px 0 10px;
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+  gap: 10px;
+  min-height: 0;
+  padding: 8px 0 0;
 }
 
 .visualMat {
   position: absolute;
-  inset: 0 24px 22px 10px;
+  inset: 0 18px 18px 8px;
   border-radius: 28px;
   background:
     linear-gradient(135deg, rgba(178, 122, 69, 0.2), rgba(29, 103, 95, 0.14)),
@@ -139,11 +143,22 @@
 
 .visualFrame {
   position: relative;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
   border-radius: 26px;
   border: 1px solid rgba(116, 99, 74, 0.14);
   overflow: hidden;
   background: #fdf8f0;
   box-shadow: 0 24px 40px rgba(26, 22, 18, 0.12);
+}
+
+.visualFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .visualCaption {
@@ -175,7 +190,7 @@
   }
 
   .visual {
-    padding-top: 8px;
+    padding-top: 4px;
   }
 
   .visualMat {

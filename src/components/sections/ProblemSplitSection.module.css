@@ -2,8 +2,9 @@
 .chainLayout,
 .storiesLayout {
   display: grid;
-  gap: 24px;
+  gap: 16px;
   height: 100%;
+  min-height: 0;
 }
 
 .matrixLayout {
@@ -13,12 +14,13 @@
 .copyColumn {
   display: grid;
   align-content: start;
-  gap: 16px;
+  gap: 12px;
+  min-height: 0;
 }
 
 .paragraphs {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .paragraphs p,
@@ -29,8 +31,8 @@
 .storyCard p {
   margin: 0;
   color: var(--ink-soft);
-  line-height: 1.62;
-  font-size: 0.92rem;
+  line-height: 1.5;
+  font-size: 0.88rem;
 }
 
 .signalCard,
@@ -47,7 +49,7 @@
 }
 
 .signalCard {
-  padding: 16px 18px;
+  padding: 14px 16px;
 }
 
 .signalCard strong,
@@ -63,15 +65,16 @@
 .toolGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
 .toolCard {
-  padding: 16px;
+  padding: 14px;
 }
 
 .matrixPanel {
-  padding: 22px;
+  min-height: 0;
+  padding: 18px;
   background:
     linear-gradient(180deg, rgba(254, 251, 247, 0.96), rgba(239, 246, 243, 0.88)),
     rgba(255, 250, 244, 0.9);
@@ -94,8 +97,8 @@
 
 .matrixTable {
   display: grid;
-  gap: 10px;
-  margin-top: 18px;
+  gap: 8px;
+  margin-top: 14px;
 }
 
 .matrixHead,
@@ -109,10 +112,10 @@
 .axisHead,
 .rowHead,
 .matrixCell {
-  min-height: 88px;
+  min-height: 72px;
   border-radius: 18px;
   border: 1px solid rgba(116, 99, 74, 0.14);
-  padding: 14px 16px;
+  padding: 12px 14px;
 }
 
 .axisEmpty {
@@ -165,17 +168,18 @@
 .chainTop {
   display: grid;
   grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
-  gap: 18px;
+  gap: 14px;
+  min-height: 0;
 }
 
 .insightGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
 .insightCard {
-  padding: 18px;
+  padding: 16px;
 }
 
 .insightTitle {
@@ -216,7 +220,7 @@
 }
 
 .chainBoard {
-  padding: 22px;
+  padding: 18px;
   background:
     linear-gradient(180deg, rgba(251, 248, 241, 0.96), rgba(239, 247, 244, 0.88)),
     rgba(255, 252, 247, 0.92);
@@ -224,21 +228,21 @@
 
 .chainHypothesis {
   margin: 0 0 16px;
-  font-size: 0.94rem;
+  font-size: 0.9rem;
   color: #4f5e58;
 }
 
 .chainRows {
   display: grid;
-  gap: 14px;
+  gap: 10px;
 }
 
 .chainRow {
   display: grid;
   grid-template-columns: 50px 1fr 170px;
-  gap: 16px;
+  gap: 14px;
   align-items: center;
-  padding: 16px 18px;
+  padding: 14px 16px;
   border-radius: 18px;
   border: 1px solid rgba(116, 99, 74, 0.14);
   background: rgba(255, 252, 247, 0.86);
@@ -279,25 +283,26 @@
 .storiesGrid {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.2fr) minmax(0, 0.98fr);
-  gap: 16px;
+  gap: 12px;
+  min-height: 0;
 }
 
 .sidePane,
 .storyCard {
-  padding: 18px;
+  padding: 16px;
 }
 
 .sidePane h3,
 .storyCard h3 {
-  margin: 10px 0 10px;
+  margin: 8px 0 8px;
   font-family: "Fraunces", "Noto Serif SC", serif;
-  font-size: 1.28rem;
+  font-size: 1.12rem;
   line-height: 1.15;
 }
 
 .storyCardGrid {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .storyKicker {
@@ -309,11 +314,11 @@
 }
 
 .solutionPane ul {
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   padding-left: 18px;
   color: var(--ink-soft);
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 :global([data-tone="ink"]) .paragraphs p,

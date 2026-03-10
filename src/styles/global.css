@@ -25,7 +25,7 @@
   --nav-w: 252px;
   --pager-h: 88px;
   --page-max: 1380px;
-  --section-safe-h: calc(100dvh - var(--header-h) - var(--pager-h) - 24px);
+  --section-safe-h: calc(100dvh - var(--header-h) - var(--pager-h) - 16px);
 }
 
 * {

@@ -52,13 +52,12 @@ export const skillSystemShowcase: ShowcaseSectionContent = {
   pageType: "showcase",
   tone: "sage",
   lead: "用户在自然使用中，Agent 持续观察行为模式。当发现重复工作流时，主动搜索或生成匹配的 skill，并通过对话推荐安装。",
-  description: "产品关键点不只是推荐，而是让安装失败也能在同一条对话里被 Agent 继续兜底。",
   screens: [
     {
       src: "/images/skill-insight-2026-03-10.png",
       alt: "Skill Insight 功能截图，展示 Agent 分析用户行为模式、搜索现成 skill 并输出推荐对话的完整闭环",
       title: "Skill Insight",
-      caption: "Agent 分析历史 session，发现重复模式，主动搜索并推荐安装。用户只需要做最后确认。",
+      caption: "Agent 分析历史 session，发现重复模式，主动搜索并推荐安装。用户一键确认，失败由 Agent 继续兜底。",
       size: "feature"
     },
     {
@@ -77,9 +76,8 @@ export const skillSystemArchitecture: ArchitectureSectionContent = {
   title: "这套系统怎么工作",
   kicker: "Skill System / Page 3",
   pageType: "architecture",
-  tone: "ink",
-  lead: "工程决策即产品决策。下面四个关键选择，每一个背后都是一个产品判断，而不只是技术取舍。",
-  description: "目标不是把技能系统做成商店，而是做成 Agent 的持续能力增强管线。",
+  tone: "linen",
+  lead: "下面四个关键设计，决定了 Skill Insight 如何稳定运行，并进入真实对话链路。",
   image: {
     src: "/images/skill-system-architecture-placeholder.png",
     alt: "Skill System 架构流程图"

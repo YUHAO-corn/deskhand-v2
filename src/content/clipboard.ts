@@ -68,7 +68,7 @@ export const clipboardShowcase: ShowcaseSectionContent = {
   pageType: "showcase",
   tone: "linen",
   lead: "剪贴板不再只是用户手动粘贴的缓存区，而是可被 Agent 主动查询、筛选、引用的资源层。",
-  description: "这页使用两个等权截图，强调它不是一次性 demo，而是可泛化的调用模式。",
+  layout: "balanced",
   screens: [
     {
       src: "/images/clipboard-1.png",
@@ -94,8 +94,7 @@ export const clipboardArchitecture: ArchitectureSectionContent = {
   kicker: "Clipboard / Page 3",
   pageType: "architecture",
   tone: "sage",
-  lead: "这不是简单地把数据暴露给模型，而是要在成本、噪音和可靠性之间做清楚的系统切分。",
-  description: "最后形成的是一个面向环境上下文的统一工具入口，而不是一堆互相平行的点状能力。",
+  lead: "这套能力的关键，是让 AI 能稳定查询、筛选并读取真正有用的剪贴板历史。",
   image: {
     src: "/images/clipboard-architeture.png",
     alt: "Clipboard 环境感知架构图，展示 query_env_context 与多个数据源的路由关系"

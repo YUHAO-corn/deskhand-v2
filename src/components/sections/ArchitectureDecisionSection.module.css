@@ -1,32 +1,38 @@
 .layout {
   display: grid;
-  gap: 18px;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  gap: 12px;
   height: 100%;
+  min-height: 0;
 }
 
 .description {
   margin: -4px 0 0;
   color: var(--ink-muted);
-  font-size: 0.92rem;
-  line-height: 1.58;
+  font-size: 0.88rem;
+  line-height: 1.48;
 }
 
 .body {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
-  gap: 16px;
-  height: 100%;
+  grid-template-columns: minmax(0, 1.16fr) minmax(0, 0.84fr);
+  gap: 14px;
+  min-height: 0;
 }
 
 .figure,
 .sidebar {
   margin: 0;
+  min-height: 0;
   border-radius: 24px;
   border: 1px solid rgba(116, 99, 74, 0.16);
   overflow: hidden;
 }
 
 .figure {
+  display: grid;
+  place-items: center;
+  padding: 12px;
   background: rgba(255, 250, 243, 0.82);
   box-shadow: 0 16px 32px rgba(30, 26, 20, 0.08);
 }
@@ -34,11 +40,12 @@
 .figure img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
 .sidebar {
-  padding: 20px;
+  padding: 16px;
   background: rgba(255, 251, 246, 0.76);
 }
 
@@ -52,11 +59,11 @@
 
 .decisionGrid {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .decisionCard {
-  padding: 16px;
+  padding: 14px;
   border-radius: 18px;
   border: 1px solid rgba(116, 99, 74, 0.14);
   background: rgba(255, 252, 247, 0.86);
@@ -64,14 +71,14 @@
 
 .decisionCard strong {
   display: block;
-  font-size: 0.9rem;
-  margin-bottom: 8px;
+  font-size: 0.88rem;
+  margin-bottom: 6px;
 }
 
 .decisionCard p {
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.58;
+  font-size: 0.86rem;
+  line-height: 1.48;
   color: var(--ink-soft);
 }
 

@@ -13,14 +13,15 @@ export function SolutionShowcaseSection({
   section,
   index
 }: SolutionShowcaseSectionProps) {
+  const layoutClass =
+    section.layout === "balanced" ? styles.balanced : section.screens.length === 2 ? styles.featured : styles.single;
+
   return (
     <SectionCanvas id={section.id} index={index} tone={section.tone}>
       <div className={styles.layout}>
         <SectionHeader kicker={section.kicker} lead={section.lead} title={section.title} />
-        <p className={styles.description}>{section.description}</p>
-        <div
-          className={`${styles.grid} ${section.screens.length === 2 ? styles.twoUp : styles.single}`}
-        >
+        {section.description ? <p className={styles.description}>{section.description}</p> : null}
+        <div className={`${styles.grid} ${layoutClass}`}>
           {section.screens.map((screen) => (
             <ScreenCard key={screen.title} screen={screen} />
           ))}

@@ -12,11 +12,13 @@ export function ComparisonMatrixSection({
   section,
   index
 }: ComparisonMatrixSectionProps) {
+  const contrast = section.tone === "ink" ? "light" : "dark";
+
   return (
     <SectionCanvas id={section.id} index={index} tone={section.tone}>
       <div className={styles.layout}>
         <div className={styles.copyColumn}>
-          <SectionHeader contrast="light" kicker={section.kicker} lead={section.lead} title={section.title} />
+          <SectionHeader contrast={contrast} kicker={section.kicker} lead={section.lead} title={section.title} />
 
           <article className={styles.thesisCard}>
             <h3>{section.thesis.title}</h3>

@@ -23,7 +23,7 @@ export function ArchitectureDecisionSection({
           lead={section.lead}
           title={section.title}
         />
-        <p className={styles.description}>{section.description}</p>
+        {section.description ? <p className={styles.description}>{section.description}</p> : null}
 
         <div className={styles.body}>
           <figure className={styles.figure}>

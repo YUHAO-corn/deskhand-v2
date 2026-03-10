@@ -16,7 +16,7 @@ export function HeroSection({ section, index }: HeroSectionProps) {
             <p className={styles.eyebrow}>{section.eyebrow}</p>
             <h1 className={styles.title}>{section.title}</h1>
             <p className={styles.subtitle}>{section.subtitle}</p>
-            <p className={styles.summary}>{section.summary}</p>
+            {section.summary ? <p className={styles.summary}>{section.summary}</p> : null}
           </div>
 
           <div className={styles.copyBottom}>
@@ -30,7 +30,7 @@ export function HeroSection({ section, index }: HeroSectionProps) {
             </div>
 
             <div className={styles.stackBlock}>
-              <p className={styles.note}>{section.note}</p>
+              {section.note ? <p className={styles.note}>{section.note}</p> : null}
               <ul className={styles.stack} aria-label="技术栈">
                 {section.stack.map((item) => (
                   <li key={item}>{item}</li>
@@ -45,10 +45,12 @@ export function HeroSection({ section, index }: HeroSectionProps) {
           <div className={styles.visualFrame}>
             <img src={section.image.src} alt={section.image.alt} loading="eager" decoding="async" />
           </div>
-          <div className={styles.visualCaption}>
-            <strong>{section.image.title}</strong>
-            <span>{section.image.caption}</span>
-          </div>
+          {section.image.title || section.image.caption ? (
+            <div className={styles.visualCaption}>
+              {section.image.title ? <strong>{section.image.title}</strong> : null}
+              {section.image.caption ? <span>{section.image.caption}</span> : null}
+            </div>
+          ) : null}
         </div>
       </div>
     </SectionCanvas>

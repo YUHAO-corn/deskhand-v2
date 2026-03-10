@@ -11,10 +11,12 @@ export function ScreenCard({ screen }: ScreenCardProps) {
       <div className={styles.frame}>
         <img className={styles.image} src={screen.src} alt={screen.alt} loading="lazy" decoding="async" />
       </div>
-      <figcaption className={styles.caption}>
-        <strong>{screen.title}</strong>
-        <span>{screen.caption}</span>
-      </figcaption>
+      {screen.title || screen.caption ? (
+        <figcaption className={styles.caption}>
+          {screen.title ? <strong>{screen.title}</strong> : null}
+          {screen.caption ? <span>{screen.caption}</span> : null}
+        </figcaption>
+      ) : null}
     </figure>
   );
 }

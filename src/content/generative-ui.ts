@@ -65,8 +65,6 @@ export const generativeUiSolution: ShowcaseSectionContent = {
   pageType: "showcase",
   tone: "linen",
   lead: "用可视化的偏好测试、二选一、原型探索替代冗长文字描述，让用户在交互中找到方向。",
-  description:
-    "这不是给聊天框加装饰，而是把“探索本身”变成系统的一等公民。",
   screens: [
     {
       src: "/images/genui-playground-2026-03-09.png",
@@ -92,8 +90,7 @@ export const generativeUiArchitecture: ArchitectureSectionContent = {
   kicker: "Generative UI / Page 3",
   pageType: "architecture",
   tone: "copper",
-  lead: "上一页看到的 Playground 和 This or That 背后，是一套让 Agent 按需生成交互式 UI，并将用户选择结果回流到对话的闭环系统。",
-  description: "工程决策直接决定了产品边界与可用性。",
+  lead: "上一页的 Playground 和 This or That 背后，是一套让 Agent 按需生成交互式 UI，并把用户选择回流到对话的闭环系统。",
   image: {
     src: "/images/genui-architecture-2026-03-09.png",
     alt: "Generative UI 架构流程图，展示上下文输入、Agent 处理、Artifact 生成与安全边界"
