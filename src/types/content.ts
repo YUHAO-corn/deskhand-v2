@@ -123,7 +123,7 @@ export interface DecisionCard {
   body: string;
 }
 
-export type ArchitectureSectionLayout = "cards" | "decisionRail";
+export type ArchitectureSectionLayout = "cards" | "decisionRail" | "diagramFocus";
 export type ArchitectureImageFrame = "standard" | "wide" | "square";
 
 export interface ArchitectureSectionContent extends NavMeta {

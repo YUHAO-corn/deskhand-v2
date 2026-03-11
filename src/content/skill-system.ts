@@ -77,7 +77,7 @@ export const skillSystemArchitecture: ArchitectureSectionContent = {
   kicker: "Skill System / Page 3",
   pageType: "architecture",
   tone: "linen",
-  layout: "decisionRail",
+  layout: "diagramFocus",
   imageFrame: "wide",
   lead: "下面四个关键设计，决定了 Skill Insight 如何稳定运行，并进入真实对话链路。",
   decisionTitle: "关键工程决策",

@@ -6,6 +6,10 @@
   min-height: 0;
 }
 
+.layoutFocus {
+  grid-template-rows: minmax(0, 1fr);
+}
+
 .description {
   margin: -4px 0 0;
   color: var(--ink-muted);
@@ -32,6 +36,20 @@
 
 .bodyRailSquare {
   grid-template-columns: minmax(0, 1.08fr) minmax(17.4rem, 0.92fr);
+}
+
+.bodyFocus {
+  grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.82fr);
+  gap: 14px;
+  height: 100%;
+}
+
+.bodyFocusWide {
+  grid-template-columns: minmax(0, 1.78fr) minmax(17.8rem, 0.98fr);
+}
+
+.bodyFocusSquare {
+  grid-template-columns: minmax(0, 1.42fr) minmax(18.8rem, 1fr);
 }
 
 .figure,
@@ -73,6 +91,15 @@
   padding: 16px;
 }
 
+.figureFocus {
+  padding: 18px;
+  align-self: stretch;
+  background:
+    radial-gradient(circle at 16% 16%, rgba(255, 255, 255, 0.72), transparent 28%),
+    linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(241, 247, 244, 0.9)),
+    rgba(255, 250, 243, 0.9);
+}
+
 .sidebar {
   padding: 16px;
   background: rgba(255, 251, 246, 0.76);
@@ -95,6 +122,16 @@
     rgba(255, 251, 246, 0.82);
 }
 
+.sidebarFocus {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  gap: 12px;
+  padding: 18px 18px 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(248, 241, 232, 0.92)),
+    rgba(255, 251, 246, 0.84);
+}
+
 .decisionGrid {
   display: grid;
   gap: 10px;
@@ -104,6 +141,36 @@
   display: grid;
   gap: 8px;
   align-content: start;
+}
+
+.narrativeRail {
+  display: grid;
+  gap: 8px;
+}
+
+.railKicker {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.railTitle {
+  margin: 0;
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: clamp(1.5rem, 1.8vw, 2rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.railLead,
+.railDescription {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.46;
+  color: var(--ink-soft);
 }
 
 .decisionCard {
@@ -131,7 +198,7 @@
   grid-template-columns: 44px minmax(0, 1fr);
   gap: 12px;
   align-items: start;
-  padding-top: 10px;
+  padding-top: 9px;
   border-top: 1px solid rgba(116, 99, 74, 0.12);
 }
 
@@ -162,17 +229,19 @@
 .railCopy strong {
   display: block;
   font-size: 0.88rem;
-  line-height: 1.24;
+  line-height: 1.2;
 }
 
 .railCopy p {
   margin: 0;
-  font-size: 0.83rem;
-  line-height: 1.42;
+  font-size: 0.82rem;
+  line-height: 1.36;
   color: var(--ink-soft);
 }
 
 :global([data-tone="ink"]) .description,
+:global([data-tone="ink"]) .railLead,
+:global([data-tone="ink"]) .railDescription,
 :global([data-tone="ink"]) .decisionCard p,
 :global([data-tone="ink"]) .railCopy p {
   color: rgba(243, 235, 223, 0.78);
@@ -197,10 +266,18 @@
   border-top-color: rgba(236, 224, 207, 0.1);
 }
 
+:global([data-tone="ink"]) .railKicker {
+  color: #9fd2c9;
+}
+
 :global([data-tone="ink"]) .railIndex {
   border-color: rgba(159, 210, 201, 0.26);
   background: rgba(159, 210, 201, 0.08);
   color: #e7dfd3;
+}
+
+:global([data-tone="ink"]) .railTitle {
+  color: #f3ebdf;
 }
 
 @media (max-width: 920px) {

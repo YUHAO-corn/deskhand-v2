@@ -94,7 +94,7 @@ export const clipboardArchitecture: ArchitectureSectionContent = {
   kicker: "Clipboard / Page 3",
   pageType: "architecture",
   tone: "sage",
-  layout: "decisionRail",
+  layout: "diagramFocus",
   imageFrame: "square",
   lead: "这套能力的关键，是让 AI 能稳定查询、筛选并读取真正有用的剪贴板历史。",
   decisionTitle: "关键工程决策",
