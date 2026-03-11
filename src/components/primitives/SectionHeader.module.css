@@ -35,3 +35,15 @@
 .light .lead {
   color: rgba(243, 235, 223, 0.78);
 }
+
+:global([data-section="generative-ui"]) .title {
+  font-size: clamp(1.28rem, 1.7vw, 1.76rem);
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+@media (max-width: 920px) {
+  :global([data-section="generative-ui"]) .title {
+    white-space: normal;
+  }
+}

@@ -7,6 +7,11 @@
   min-height: 0;
 }
 
+.chainLayout,
+.storiesLayout {
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
 .matrixLayout {
   grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
 }
@@ -31,8 +36,8 @@
 .storyCard p {
   margin: 0;
   color: var(--ink-soft);
-  line-height: 1.5;
-  font-size: 0.88rem;
+  line-height: 1.44;
+  font-size: 0.85rem;
 }
 
 .signalCard,
@@ -167,8 +172,8 @@
 
 .chainTop {
   display: grid;
-  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
-  gap: 14px;
+  grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+  gap: 12px;
   min-height: 0;
 }
 
@@ -179,7 +184,7 @@
 }
 
 .insightCard {
-  padding: 16px;
+  padding: 14px;
 }
 
 .insightTitle {
@@ -200,11 +205,11 @@
 }
 
 .insightBody {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .tagRow {
-  margin-top: 14px;
+  margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -220,42 +225,49 @@
 }
 
 .chainBoard {
-  padding: 18px;
+  padding: 16px;
   background:
     linear-gradient(180deg, rgba(251, 248, 241, 0.96), rgba(239, 247, 244, 0.88)),
     rgba(255, 252, 247, 0.92);
 }
 
 .chainHypothesis {
-  margin: 0 0 16px;
-  font-size: 0.9rem;
+  margin: 0 0 12px;
+  font-size: 0.85rem;
   color: #4f5e58;
 }
 
 .chainRows {
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .chainRow {
   display: grid;
-  grid-template-columns: 50px 1fr 170px;
-  gap: 14px;
-  align-items: center;
-  padding: 14px 16px;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 12px 14px;
   border-radius: 18px;
   border: 1px solid rgba(116, 99, 74, 0.14);
   background: rgba(255, 252, 247, 0.86);
 }
 
-.chainRow strong {
-  font-size: 1rem;
+.chainCopy {
+  display: grid;
+  gap: 4px;
 }
 
-.chainRow em {
-  font-style: normal;
+.chainRow strong {
+  font-size: 0.96rem;
+  line-height: 1.26;
+}
+
+.chainCopy p {
+  margin: 0;
   color: var(--ink-muted);
-  font-size: 0.84rem;
+  font-size: 0.82rem;
+  line-height: 1.36;
 }
 
 .chainRowNew {
@@ -283,26 +295,35 @@
 .storiesGrid {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.2fr) minmax(0, 0.98fr);
-  gap: 12px;
+  gap: 10px;
   min-height: 0;
+  align-items: stretch;
 }
 
 .sidePane,
 .storyCard {
-  padding: 16px;
+  padding: 14px;
 }
 
 .sidePane h3,
 .storyCard h3 {
-  margin: 8px 0 8px;
+  margin: 6px 0;
   font-family: "Fraunces", "Noto Serif SC", serif;
-  font-size: 1.12rem;
+  font-size: 1rem;
   line-height: 1.15;
 }
 
 .storyCardGrid {
   display: grid;
-  gap: 10px;
+  gap: 8px;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  min-height: 0;
+}
+
+.storyCard {
+  display: grid;
+  align-content: start;
+  gap: 4px;
 }
 
 .storyKicker {
@@ -314,11 +335,16 @@
 }
 
 .solutionPane ul {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   padding-left: 18px;
   color: var(--ink-soft);
   display: grid;
-  gap: 8px;
+  gap: 6px;
+}
+
+.solutionPane li {
+  line-height: 1.4;
+  font-size: 0.84rem;
 }
 
 :global([data-tone="ink"]) .paragraphs p,

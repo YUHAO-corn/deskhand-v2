@@ -15,12 +15,25 @@ export function SiteHeader({ onOpenNav }: SiteHeaderProps) {
           </a>
         </div>
 
-        <nav className={styles.links} aria-label="作者信息链接">
-          <a className={styles.linkChip} href="https://github.com/YUHAO-corn" target="_blank" rel="noreferrer">
-            GitHub
+        <nav className={styles.links} aria-label="Project actions">
+          <a
+            className={styles.linkChip}
+            href="https://github.com/YUHAO-corn/Deskhand"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Repo
           </a>
-          <a className={`${styles.linkChip} ${styles.linkStrong}`} href="#why-desktop">
-            Decision
+          <a
+            className={styles.linkChip}
+            href="https://yuhao-corn.github.io/column/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Design Notes
+          </a>
+          <a className={`${styles.linkChip} ${styles.linkStrong}`} href="/resume.txt" download>
+            Download Resume
           </a>
         </nav>
 

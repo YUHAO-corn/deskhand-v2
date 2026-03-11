@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 14px;
 }
 
 .brandBlock {
@@ -48,8 +48,10 @@
 
 .links {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .linkChip {
@@ -57,12 +59,14 @@
   align-items: center;
   justify-content: center;
   min-height: 38px;
-  padding: 0 14px;
+  padding: 0 13px;
   border-radius: 999px;
   border: 1px solid rgba(116, 99, 74, 0.2);
   background: rgba(255, 251, 245, 0.84);
   color: #3e4b45;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -79,6 +83,11 @@
   border-color: rgba(29, 103, 95, 0.4);
   background: linear-gradient(180deg, rgba(233, 247, 242, 0.96), rgba(223, 240, 233, 0.96));
   color: #123f39;
+}
+
+.linkStrong:hover {
+  border-color: rgba(29, 103, 95, 0.5);
+  background: linear-gradient(180deg, rgba(223, 244, 237, 0.98), rgba(211, 237, 229, 0.98));
 }
 
 .menuButton {

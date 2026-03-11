@@ -7,7 +7,7 @@ import type {
 export const generativeUiProblem: ProblemSplitSectionContent = {
   id: "generative-ui",
   navLabel: "Gen UI / 01",
-  title: "除了对话，AI 还需要什么交互形式？",
+  title: "我为什么开始补自然语言之外的交互形式",
   kicker: "Generative UI / Page 1",
   pageType: "problemSplit",
   tone: "sage",

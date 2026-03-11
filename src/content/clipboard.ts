@@ -19,8 +19,8 @@ export const clipboardProblem: ProblemSplitSectionContent = {
   painCard: {
     title: "核心痛点",
     paragraphs: [
-      "剪贴板不是一个零散功能点，而是用户工作流最密集、最短暂、也最容易被系统忽略的上下文通道。",
-      "如果 AI 看不见这层资源，它就只能继续做“会聊天”的工具，而不是“能接着做事”的助手。"
+      "剪贴板不是零散功能点，而是用户工作流里最密集、最短暂，也最容易被系统忽略的上下文通道。",
+      "AI 如果看不见这层资源，就很难从“会聊天”走到“能接着做事”。"
     ]
   },
   storyCards: [
@@ -29,7 +29,7 @@ export const clipboardProblem: ProblemSplitSectionContent = {
       title: "跨境电商运营小李",
       lines: [
         "连续复制竞品标题、卖点、评论和链接。",
-        "下午想让 AI 起草文案，但已经记不清复制过什么。"
+        "下午想让 AI 起草文案，却已经记不清自己复制过什么。"
       ]
     },
     {
@@ -37,7 +37,7 @@ export const clipboardProblem: ProblemSplitSectionContent = {
       title: "猎头顾问小王",
       lines: [
         "频繁复制候选人经历、岗位要求和企业介绍。",
-        "切回 AI 窗口后，还得手动重新粘贴背景信息。"
+        "切回 AI 窗口后，还得重新粘贴背景信息。"
       ]
     },
     {
@@ -51,10 +51,10 @@ export const clipboardProblem: ProblemSplitSectionContent = {
   ],
   solutionCard: {
     title: "解决方案",
-    intro: "Deskhand 做的不是普通剪贴板管理器，而是面向桌面智能体的环境上下文能力。",
+    intro: "Deskhand 做的不是普通剪贴板管理器，而是面向桌面智能体的环境上下文层。",
     bullets: [
-      "让 AI 不只是理解用户当前说了什么，还能拿到用户刚刚处理过什么。",
-      "让剪贴板从一次性的中转站，变成可持续复用的工作记忆。",
+      "让 AI 不只理解用户现在说什么，也能拿到刚处理过什么。",
+      "让剪贴板从一次性中转站，变成可复用的工作记忆。",
       "让 AI 从“会聊天”进一步走向“能接着做事”。"
     ]
   }
@@ -81,7 +81,7 @@ export const clipboardShowcase: ShowcaseSectionContent = {
       src: "/images/clipboard-2.png",
       alt: "剪贴板历史文件被 AI 引用和分析的任务执行截图",
       title: "Clipboard-2",
-      caption: "AI 在执行过程中引用剪贴板历史文件与架构文档，展示了环境上下文如何真正参与任务执行。",
+      caption: "拿到剪贴板历史后，Agent 不只还原了我的工作轨迹，还主动总结出工作特征和时间分布。真正让我惊喜的是这层额外洞察。",
       size: "feature"
     }
   ]
@@ -94,7 +94,10 @@ export const clipboardArchitecture: ArchitectureSectionContent = {
   kicker: "Clipboard / Page 3",
   pageType: "architecture",
   tone: "sage",
+  layout: "decisionRail",
+  imageFrame: "square",
   lead: "这套能力的关键，是让 AI 能稳定查询、筛选并读取真正有用的剪贴板历史。",
+  decisionTitle: "关键工程决策",
   image: {
     src: "/images/clipboard-architeture.png",
     alt: "Clipboard 环境感知架构图，展示 query_env_context 与多个数据源的路由关系"

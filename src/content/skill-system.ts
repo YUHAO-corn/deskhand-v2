@@ -26,7 +26,7 @@ export const skillSystemProblem: ProblemSplitSectionContent = {
     },
     {
       title: "我的观察",
-      body: "我有个做 HR 的朋友，知道 Deskhand 里可能有“技能包”，但她不知道终端是什么，也不知道去哪找、怎么装。Skill 生态对她来说是一扇没有把手的门。"
+      body: "我有个做 HR 的朋友，知道 Deskhand 里可能有“技能包”，但她不知道终端是什么，也不知道去哪找、怎么装。Skill 生态就在那儿，但她既找不到入口，也不知道第一步该怎么开始。"
     }
   ],
   chain: {
@@ -77,9 +77,12 @@ export const skillSystemArchitecture: ArchitectureSectionContent = {
   kicker: "Skill System / Page 3",
   pageType: "architecture",
   tone: "linen",
+  layout: "decisionRail",
+  imageFrame: "wide",
   lead: "下面四个关键设计，决定了 Skill Insight 如何稳定运行，并进入真实对话链路。",
+  decisionTitle: "关键工程决策",
   image: {
-    src: "/images/skill-system-architecture.svg",
+    src: "/images/skill-system-architecture.png",
     alt: "Skill System 架构流程图"
   },
   decisions: [

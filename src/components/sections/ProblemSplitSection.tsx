@@ -119,15 +119,19 @@ export function ProblemSplitSection({ section, index }: ProblemSplitSectionProps
               <div className={styles.chainRows}>
                 <div className={styles.chainRow}>
                   <span className={styles.chainTag}>{section.chain.oldPath.label}</span>
-                  <strong>{section.chain.oldPath.flow}</strong>
-                  <em>{section.chain.oldPath.note}</em>
+                  <div className={styles.chainCopy}>
+                    <strong>{section.chain.oldPath.flow}</strong>
+                    <p>{section.chain.oldPath.note}</p>
+                  </div>
                 </div>
                 <div className={`${styles.chainRow} ${styles.chainRowNew}`}>
                   <span className={`${styles.chainTag} ${styles.chainTagNew}`}>
                     {section.chain.newPath.label}
                   </span>
-                  <strong>{section.chain.newPath.flow}</strong>
-                  <em>{section.chain.newPath.note}</em>
+                  <div className={styles.chainCopy}>
+                    <strong>{section.chain.newPath.flow}</strong>
+                    <p>{section.chain.newPath.note}</p>
+                  </div>
                 </div>
               </div>
             </article>

@@ -18,6 +18,20 @@
   grid-template-columns: minmax(0, 1.16fr) minmax(0, 0.84fr);
   gap: 14px;
   min-height: 0;
+  align-items: stretch;
+}
+
+.bodyRail {
+  grid-template-columns: minmax(0, 1.18fr) minmax(17rem, 0.82fr);
+  gap: 16px;
+}
+
+.bodyRailWide {
+  grid-template-columns: minmax(0, 1.26fr) minmax(16.2rem, 0.74fr);
+}
+
+.bodyRailSquare {
+  grid-template-columns: minmax(0, 1.08fr) minmax(17.4rem, 0.92fr);
 }
 
 .figure,
@@ -44,6 +58,21 @@
   object-position: center;
 }
 
+.figureRail {
+  padding: 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 247, 0.96), rgba(240, 247, 244, 0.82)),
+    rgba(255, 250, 243, 0.84);
+}
+
+.figureWide {
+  padding-inline: 16px;
+}
+
+.figureSquare {
+  padding: 16px;
+}
+
 .sidebar {
   padding: 16px;
   background: rgba(255, 251, 246, 0.76);
@@ -57,9 +86,24 @@
   color: var(--sage);
 }
 
+.sidebarRail {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  padding: 18px 18px 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(247, 240, 230, 0.9)),
+    rgba(255, 251, 246, 0.82);
+}
+
 .decisionGrid {
   display: grid;
   gap: 10px;
+}
+
+.decisionRail {
+  display: grid;
+  gap: 8px;
+  align-content: start;
 }
 
 .decisionCard {
@@ -82,8 +126,55 @@
   color: var(--ink-soft);
 }
 
+.railItem {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding-top: 10px;
+  border-top: 1px solid rgba(116, 99, 74, 0.12);
+}
+
+.railItem:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.railIndex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border-radius: 14px;
+  border: 1px solid rgba(29, 103, 95, 0.18);
+  background: rgba(233, 247, 242, 0.74);
+  color: #174640;
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+}
+
+.railCopy {
+  display: grid;
+  gap: 5px;
+}
+
+.railCopy strong {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.24;
+}
+
+.railCopy p {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.42;
+  color: var(--ink-soft);
+}
+
 :global([data-tone="ink"]) .description,
-:global([data-tone="ink"]) .decisionCard p {
+:global([data-tone="ink"]) .decisionCard p,
+:global([data-tone="ink"]) .railCopy p {
   color: rgba(243, 235, 223, 0.78);
 }
 
@@ -100,6 +191,16 @@
 :global([data-tone="ink"]) .decisionCard {
   background: rgba(255, 249, 240, 0.04);
   border-color: rgba(236, 224, 207, 0.1);
+}
+
+:global([data-tone="ink"]) .railItem {
+  border-top-color: rgba(236, 224, 207, 0.1);
+}
+
+:global([data-tone="ink"]) .railIndex {
+  border-color: rgba(159, 210, 201, 0.26);
+  background: rgba(159, 210, 201, 0.08);
+  color: #e7dfd3;
 }
 
 @media (max-width: 920px) {
