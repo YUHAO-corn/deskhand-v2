@@ -33,6 +33,7 @@ export function ProblemSplitSection({ section, index }: ProblemSplitSectionProps
                 <p>{section.signal.body}</p>
               </article>
             ) : null}
+            {section.toolIntro ? <p className={styles.toolIntro}>{section.toolIntro}</p> : null}
             {section.toolCards ? (
               <div className={styles.toolGrid}>
                 {section.toolCards.map((tool) => (

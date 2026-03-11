@@ -93,6 +93,7 @@ export interface ProblemSplitSectionContent extends NavMeta {
     title: string;
     body: string;
   };
+  toolIntro?: string;
   toolCards?: Array<{
     title: string;
     description: string;

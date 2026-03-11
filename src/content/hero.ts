@@ -4,7 +4,7 @@ export const heroSection: HeroSectionContent = {
   id: "hero",
   navLabel: "Intro",
   title: "Deskhand",
-  kicker: "Project overview",
+  kicker: "Case Study",
   pageType: "hero",
   tone: "hero",
   eyebrow: "Product Thinking, Shipped in Code",

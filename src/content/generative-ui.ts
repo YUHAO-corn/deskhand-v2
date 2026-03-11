@@ -12,15 +12,17 @@ export const generativeUiProblem: ProblemSplitSectionContent = {
   pageType: "problemSplit",
   tone: "sage",
   variant: "matrix",
-  lead: "当前主流的 AI 交互方式，大多默认用户已经知道自己想要什么，而且能把它清楚表达出来。",
+  lead: "我在做 Deskhand 的过程中越来越明显地感觉到，很多 AI 任务的问题不是模型不够强，而是用户很多时候并不知道怎么用自然语言把需求表达清楚。",
   paragraphs: [
     "但真实高频场景里，很多任务是探索性的。用户还没想清楚方向，文字描述也不稳定，长 prompt 往往无法稳定收敛到高质量结果。",
     "在内容创作、SEO、简历编写、原型设计这类“先探索、再收敛”的任务里，问题不只是模型能力，而是交互形式不对。"
   ],
   signal: {
-    title: "行业信号",
-    body: "Claude Agent SDK 开发者社区与一线创作者都在强调：Interview 式提问和 Playground 式探索，正在成为新一代 AI 产品的关键交互范式。"
+    title: "我看到的变化",
+    body: "我在 Twitter 和开发者社区里越来越频繁地看到，社区和创作者会主动用 Interview 式提问、Playground 式探索来帮助用户收敛方向，因为很多任务本来就不是一句 prompt 能说清楚的。"
   },
+  toolIntro:
+    "所以我开始补三种非自然语言交互，让用户通过选择、比较和探索来表达意图。",
   toolCards: [
     {
       title: "Brainstorm",

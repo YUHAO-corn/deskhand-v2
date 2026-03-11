@@ -9,7 +9,7 @@ export function SiteHeader({ onOpenNav }: SiteHeaderProps) {
     <header className={styles.header}>
       <div className={styles.inner}>
         <div className={styles.brandBlock}>
-          <p className={styles.kicker}>Deskhand Case Study</p>
+          <p className={styles.kicker}>Deskhand / Case Study</p>
           <a href="#hero" className={styles.title}>
             Deskhand
           </a>
