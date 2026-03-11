@@ -3,7 +3,7 @@ import styles from "./SectionHeader.module.css";
 interface SectionHeaderProps {
   kicker: string;
   title: string;
-  lead: string;
+  lead?: string;
   contrast?: "light" | "dark";
 }
 
@@ -17,7 +17,7 @@ export function SectionHeader({
     <div className={`${styles.header} ${contrast === "light" ? styles.light : ""}`}>
       <p className={styles.kicker}>{kicker}</p>
       <h2 className={styles.title}>{title}</h2>
-      <p className={styles.lead}>{lead}</p>
+      {lead ? <p className={styles.lead}>{lead}</p> : null}
     </div>
   );
 }

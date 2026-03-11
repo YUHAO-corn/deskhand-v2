@@ -4,6 +4,7 @@ import { ArchitectureDecisionSection } from "./components/sections/ArchitectureD
 import { ClosingThoughtSection } from "./components/sections/ClosingThoughtSection";
 import { ComparisonMatrixSection } from "./components/sections/ComparisonMatrixSection";
 import { HeroSection } from "./components/sections/HeroSection";
+import { MyTakeSection } from "./components/sections/MyTakeSection";
 import { ProblemSplitSection } from "./components/sections/ProblemSplitSection";
 import { SolutionShowcaseSection } from "./components/sections/SolutionShowcaseSection";
 import { deckSections } from "./content/deck";
@@ -21,6 +22,8 @@ function renderSection(section: DeckSection, index: number) {
       return <ArchitectureDecisionSection key={section.id} section={section} index={index} />;
     case "comparisonMatrix":
       return <ComparisonMatrixSection key={section.id} section={section} index={index} />;
+    case "myTake":
+      return <MyTakeSection key={section.id} section={section} index={index} />;
     case "closingThought":
       return <ClosingThoughtSection key={section.id} section={section} index={index} />;
     default:

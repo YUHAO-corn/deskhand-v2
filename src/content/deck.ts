@@ -6,6 +6,7 @@ import {
   generativeUiSolution
 } from "./generative-ui";
 import { heroSection } from "./hero";
+import { myTakeSection } from "./my-take";
 import {
   skillSystemArchitecture,
   skillSystemProblem,
@@ -24,5 +25,6 @@ export const deckSections: DeckSection[] = [
   clipboardProblem,
   clipboardShowcase,
   clipboardArchitecture,
+  myTakeSection,
   whyDesktopSection
 ];

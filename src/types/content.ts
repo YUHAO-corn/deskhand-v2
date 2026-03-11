@@ -11,6 +11,7 @@ export interface NavMeta {
     | "showcase"
     | "architecture"
     | "comparisonMatrix"
+    | "myTake"
     | "closingThought";
   tone: SectionTone;
 }
@@ -188,10 +189,32 @@ export interface ClosingThoughtSectionContent extends NavMeta {
   closingLine: string;
 }
 
+export interface ChainNode {
+  term: string;
+  annotation: string;
+}
+
+export interface PillarCard {
+  term: string;
+  built: {
+    feature: string;
+    description: string;
+  };
+  next: string[];
+}
+
+export interface MyTakeSectionContent extends NavMeta {
+  pageType: "myTake";
+  chain: [ChainNode, ChainNode, ChainNode];
+  pillars: [PillarCard, PillarCard, PillarCard];
+  closingLine: string;
+}
+
 export type DeckSection =
   | HeroSectionContent
   | ProblemSplitSectionContent
   | ShowcaseSectionContent
   | ArchitectureSectionContent
   | ComparisonMatrixSectionContent
+  | MyTakeSectionContent
   | ClosingThoughtSectionContent;
