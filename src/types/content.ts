@@ -114,7 +114,12 @@ export interface ShowcaseSectionContent extends NavMeta {
   pageType: "showcase";
   lead: string;
   description?: string;
-  layout?: "featured" | "balanced";
+  layout?:
+    | "featured"
+    | "balanced"
+    | "editorialWide"
+    | "editorialSplit"
+    | "editorialBalanced";
   screens: ScreenAsset[];
 }
 

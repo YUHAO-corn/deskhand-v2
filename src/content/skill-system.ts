@@ -51,6 +51,7 @@ export const skillSystemShowcase: ShowcaseSectionContent = {
   kicker: "Skill System / Page 2",
   pageType: "showcase",
   tone: "sage",
+  layout: "editorialSplit",
   lead: "用户在自然使用中，Agent 持续观察行为模式。当发现重复工作流时，主动搜索或生成匹配的 skill，并通过对话推荐安装。",
   screens: [
     {

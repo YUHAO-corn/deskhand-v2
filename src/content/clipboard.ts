@@ -68,7 +68,7 @@ export const clipboardShowcase: ShowcaseSectionContent = {
   pageType: "showcase",
   tone: "linen",
   lead: "剪贴板不再只是用户手动粘贴的缓存区，而是可被 Agent 主动查询、筛选、引用的资源层。",
-  layout: "balanced",
+  layout: "editorialBalanced",
   screens: [
     {
       src: "/images/clipboard-1.png",

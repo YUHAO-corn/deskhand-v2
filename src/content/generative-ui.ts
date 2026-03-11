@@ -64,6 +64,7 @@ export const generativeUiSolution: ShowcaseSectionContent = {
   kicker: "Generative UI / Page 2",
   pageType: "showcase",
   tone: "linen",
+  layout: "editorialWide",
   lead: "用可视化的偏好测试、二选一、原型探索替代冗长文字描述，让用户在交互中找到方向。",
   screens: [
     {
