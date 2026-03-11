@@ -15,7 +15,7 @@ export const skillSystemProblem: ProblemSplitSectionContent = {
   lead: "桌面 AI Agent 的需求正在从开发者快速扩散到普通用户。这批用户不懂终端、不知道 skill 是什么，也不会主动去“应用市场”搜索安装。",
   paragraphs: [
     "Skill 生态本身存在，但大多数用户进不去。这不是用户教育问题，而是链路设计问题。",
-    "Skill 的发现、寻找、安装，不应该继续由用户来做。"
+    "Skill 的发现、寻找、安装、创建，不应该继续由用户来做。"
   ],
   insightCards: [
     {
@@ -47,7 +47,7 @@ export const skillSystemProblem: ProblemSplitSectionContent = {
 export const skillSystemShowcase: ShowcaseSectionContent = {
   id: "skill-system-features",
   navLabel: "Skill / 02",
-  title: "把 skill 的发现、寻找、安装，全部交给 Agent",
+  title: "把 skill 的发现、寻找、安装、创建，全部交给 Agent",
   kicker: "Skill System / Page 2",
   pageType: "showcase",
   tone: "sage",
