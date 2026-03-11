@@ -10,7 +10,8 @@ export interface NavMeta {
     | "problemSplit"
     | "showcase"
     | "architecture"
-    | "comparisonMatrix";
+    | "comparisonMatrix"
+    | "closingThought";
   tone: SectionTone;
 }
 
@@ -173,9 +174,24 @@ export interface ComparisonMatrixSectionContent extends NavMeta {
   };
 }
 
+export interface ClosingThoughtSectionContent extends NavMeta {
+  pageType: "closingThought";
+  titleLines: [string, string];
+  spectrum: {
+    leftTitle: string;
+    leftNote: string;
+    centerTitle: string;
+    centerNote: string;
+    rightTitle: string;
+    rightNote: string;
+  };
+  closingLine: string;
+}
+
 export type DeckSection =
   | HeroSectionContent
   | ProblemSplitSectionContent
   | ShowcaseSectionContent
   | ArchitectureSectionContent
-  | ComparisonMatrixSectionContent;
+  | ComparisonMatrixSectionContent
+  | ClosingThoughtSectionContent;
