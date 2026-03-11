@@ -30,7 +30,7 @@ export const skillSystemProblem: ProblemSplitSectionContent = {
     }
   ],
   chain: {
-    hypothesis: "我们的假设：把“养号”这件事，从用户侧转移到 Agent 侧。",
+    hypothesis: "我的设想：从用户去给 AI“养号”，变成 AI 自己去“打怪升级”",
     oldPath: {
       label: "旧",
       flow: "用户 → 发现 → 搜索 → 安装 → 受益",
