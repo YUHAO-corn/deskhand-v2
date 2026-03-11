@@ -52,7 +52,7 @@ export function MyTakeSection({ section, index }: MyTakeSectionProps) {
             ))}
           </div>
 
-          <p className={styles.closingLine}>{section.closingLine}</p>
+          {section.closingLine ? <p className={styles.closingLine}>{section.closingLine}</p> : null}
         </div>
       </div>
     </SectionCanvas>

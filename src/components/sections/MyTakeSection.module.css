@@ -41,6 +41,7 @@
   display: grid;
   grid-template-rows: auto auto auto;
   gap: clamp(12px, 1.6vh, 18px);
+  padding-top: clamp(14px, 1.6vh, 22px);
   min-height: 0;
 }
 
@@ -52,8 +53,9 @@
 }
 
 .chainStrip {
+  --chain-line-y: 2.25rem;
   position: relative;
-  align-items: center;
+  align-items: start;
   padding: 0 clamp(2px, 0.5vw, 8px);
 }
 
@@ -62,7 +64,7 @@
   position: absolute;
   left: 10%;
   right: 10%;
-  top: 50%;
+  top: var(--chain-line-y);
   transform: translateY(-50%);
   height: 2px;
   background: linear-gradient(
@@ -79,26 +81,28 @@
   position: relative;
   display: grid;
   justify-items: center;
+  align-content: start;
 }
 
 .chainNode {
   position: relative;
   z-index: 1;
   display: grid;
-  gap: 6px;
+  gap: 0;
   justify-items: center;
-  align-content: center;
-  min-height: 5rem;
-  padding: 0.25rem 0.85rem;
+  align-content: start;
+  min-height: auto;
+  padding: 0 0.85rem;
   text-align: center;
 }
 
 .chainNode strong {
   display: block;
   max-width: 14ch;
+  margin-bottom: 1rem;
   font-family: "Fraunces", "Noto Serif SC", serif;
   font-size: clamp(1.1rem, 1.58vw, 1.46rem);
-  line-height: 0.96;
+  line-height: 1.04;
   letter-spacing: -0.04em;
   color: #2a241d;
   text-wrap: balance;
@@ -113,7 +117,7 @@
 
 .chainArrow {
   position: absolute;
-  top: 50%;
+  top: var(--chain-line-y);
   transform: translateY(-50%);
   left: calc(100% - 1.45rem);
   width: calc(var(--grid-gap) + 2.9rem);

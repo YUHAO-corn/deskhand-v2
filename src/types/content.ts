@@ -208,7 +208,7 @@ export interface MyTakeSectionContent extends NavMeta {
   pageType: "myTake";
   chain: [ChainNode, ChainNode, ChainNode];
   pillars: [PillarCard, PillarCard, PillarCard];
-  closingLine: string;
+  closingLine?: string;
 }
 
 export type DeckSection =
