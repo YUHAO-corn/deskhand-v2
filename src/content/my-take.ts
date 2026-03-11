@@ -35,7 +35,7 @@ export const myTakeSection: MyTakeSectionContent = {
         feature: "Skill System",
         description: "Agent 自主观察、发现、安装、创建 skill"
       },
-      next: ["长期记忆专家", "保留偏好和风格"]
+      next: ["有长期记忆的专家Agent", "保留偏好和风格"]
     }
   ],
   closingLine: "Deskhand 在每个维度上做的都只是一个切片，但每个切片都指向了同一个方向。"

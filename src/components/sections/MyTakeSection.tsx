@@ -32,8 +32,6 @@ export function MyTakeSection({ section, index }: MyTakeSectionProps) {
           <div className={styles.pillarGrid}>
             {section.pillars.map((pillar) => (
               <article className={styles.pillarCard} key={pillar.term}>
-                <h3>{pillar.term}</h3>
-
                 <div className={styles.cardBlock}>
                   <p className={styles.blockLabel}>做了</p>
                   <strong>{pillar.built.feature}</strong>
