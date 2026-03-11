@@ -32,7 +32,11 @@ export function SiteHeader({ onOpenNav }: SiteHeaderProps) {
           >
             View Design Notes
           </a>
-          <a className={`${styles.linkChip} ${styles.linkStrong}`} href="/resume.txt" download>
+          <a
+            className={`${styles.linkChip} ${styles.linkStrong}`}
+            href="/Yuhao-Resume.pdf"
+            download="Yuhao-Resume.pdf"
+          >
             Download Resume
           </a>
         </nav>
