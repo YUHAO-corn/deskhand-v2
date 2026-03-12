@@ -1,0 +1,117 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  height: var(--header-h);
+  z-index: 40;
+  background: rgba(251, 247, 240, 0.82);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(116, 99, 74, 0.16);
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(29, 103, 95, 0.24), rgba(178, 122, 69, 0.28), transparent);
+}
+
+.inner {
+  width: min(var(--page-max), calc(100% - 32px));
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.brandBlock {
+  display: grid;
+  gap: 4px;
+}
+
+.kicker {
+  margin: 0;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: var(--sage);
+}
+
+.title {
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: clamp(1rem, 1.6vw, 1.32rem);
+  letter-spacing: -0.02em;
+}
+
+.links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.linkChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(116, 99, 74, 0.2);
+  background: rgba(255, 251, 245, 0.84);
+  color: #3e4b45;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.linkChip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(29, 103, 95, 0.35);
+  background: rgba(234, 245, 241, 0.9);
+}
+
+.linkStrong {
+  border-color: rgba(29, 103, 95, 0.4);
+  background: linear-gradient(180deg, rgba(233, 247, 242, 0.96), rgba(223, 240, 233, 0.96));
+  color: #123f39;
+}
+
+.linkStrong:hover {
+  border-color: rgba(29, 103, 95, 0.5);
+  background: linear-gradient(180deg, rgba(223, 244, 237, 0.98), rgba(211, 237, 229, 0.98));
+}
+
+.menuButton {
+  display: none;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(116, 99, 74, 0.22);
+  background: rgba(255, 251, 245, 0.82);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 920px) {
+  .inner {
+    width: calc(100% - 20px);
+  }
+
+  .links {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
