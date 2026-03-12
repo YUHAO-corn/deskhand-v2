@@ -7,7 +7,7 @@ import type {
 export const clipboardProblem: ProblemSplitSectionContent = {
   id: "clipboard",
   navLabel: "Clipboard / 01",
-  title: "剪贴板功能是 Deskhand 在“资源层”上的第一个落点",
+  title: "用户非常多有价值的上下文，都在剪贴板里",
   kicker: "Clipboard / Page 1",
   pageType: "problemSplit",
   tone: "copper",
@@ -19,7 +19,7 @@ export const clipboardProblem: ProblemSplitSectionContent = {
   painCard: {
     title: "核心痛点",
     paragraphs: [
-      "剪贴板不是零散功能点，而是用户工作流里最密集、最短暂，也最容易被系统忽略的上下文通道。",
+      "用户每天复制粘贴几十次，这些内容转瞬即逝，但对 AI 来说其实是非常有价值的工作线索。",
       "AI 如果看不见这层资源，就很难从“会聊天”走到“能接着做事”。"
     ]
   },
@@ -67,7 +67,7 @@ export const clipboardShowcase: ShowcaseSectionContent = {
   kicker: "Clipboard / Page 2",
   pageType: "showcase",
   tone: "linen",
-  lead: "剪贴板不再只是用户手动粘贴的缓存区，而是可被 Agent 主动查询、筛选、引用的资源层。",
+  lead: "现在 AI 可以主动去查你的剪贴板历史，筛选有用的内容，直接拿来用。",
   layout: "editorialBalanced",
   screens: [
     {

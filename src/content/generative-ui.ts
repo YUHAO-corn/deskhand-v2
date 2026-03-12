@@ -14,7 +14,7 @@ export const generativeUiProblem: ProblemSplitSectionContent = {
   variant: "matrix",
   lead: "用Deskhand时体会到：AI任务问题不是模型不够强，而是我说不清。",
   paragraphs: [
-    "真实高频场景里，很多任务是探索性的。使用者还没想清楚方向，文字描述也不稳定，长 prompt 往往无法稳定收敛到高质量结果。",
+    "真实高频场景里，很多任务是探索性的。用户还没想清楚方向，文字描述也不稳定，长 prompt 往往无法稳定收敛到高质量结果。",
     '在内容创作、SEO、简历编写、原型设计这类"先探索、再收敛"的任务里，问题不只是模型能力，而是交互形式不对。'
   ],
   signal: {
@@ -67,7 +67,7 @@ export const generativeUiSolution: ShowcaseSectionContent = {
   pageType: "showcase",
   tone: "linen",
   layout: "editorialWide",
-  lead: "用可视化的偏好测试、二选一、原型探索替代冗长文字描述，让用户在交互中找到方向。",
+  lead: "不用写长 prompt，用户通过选择、比较、调参来表达偏好，在交互中逐步收敛方向。",
   screens: [
     {
       src: "/images/genui-playground-2026-03-09.png",
