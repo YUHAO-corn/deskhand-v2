@@ -7,6 +7,7 @@ export interface NavMeta {
   navLabel: string;
   pageType:
     | "hero"
+    | "background"
     | "problemSplit"
     | "showcase"
     | "architecture"
@@ -211,8 +212,14 @@ export interface MyTakeSectionContent extends NavMeta {
   closingLine?: string;
 }
 
+export interface BackgroundSectionContent extends NavMeta {
+  pageType: "background";
+  paragraphs: string[];
+}
+
 export type DeckSection =
   | HeroSectionContent
+  | BackgroundSectionContent
   | ProblemSplitSectionContent
   | ShowcaseSectionContent
   | ArchitectureSectionContent

@@ -1,6 +1,7 @@
 import { startTransition, useEffect, useMemo, useState } from "react";
 import { DeckShell } from "./components/layout/DeckShell";
 import { ArchitectureDecisionSection } from "./components/sections/ArchitectureDecisionSection";
+import { BackgroundSection } from "./components/sections/BackgroundSection";
 import { ClosingThoughtSection } from "./components/sections/ClosingThoughtSection";
 import { ComparisonMatrixSection } from "./components/sections/ComparisonMatrixSection";
 import { HeroSection } from "./components/sections/HeroSection";
@@ -14,6 +15,8 @@ function renderSection(section: DeckSection, index: number) {
   switch (section.pageType) {
     case "hero":
       return <HeroSection key={section.id} section={section} index={index} />;
+    case "background":
+      return <BackgroundSection key={section.id} section={section} index={index} />;
     case "problemSplit":
       return <ProblemSplitSection key={section.id} section={section} index={index} />;
     case "showcase":

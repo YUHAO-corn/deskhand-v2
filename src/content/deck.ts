@@ -1,4 +1,5 @@
 import type { DeckSection } from "../types/content";
+import { backgroundSection } from "./background";
 import { clipboardArchitecture, clipboardProblem, clipboardShowcase } from "./clipboard";
 import {
   generativeUiArchitecture,
@@ -16,6 +17,7 @@ import { whyDesktopSection } from "./why-desktop";
 
 export const deckSections: DeckSection[] = [
   heroSection,
+  backgroundSection,
   generativeUiProblem,
   generativeUiSolution,
   generativeUiArchitecture,

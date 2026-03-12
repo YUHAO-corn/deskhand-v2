@@ -7,22 +7,22 @@ import type {
 export const generativeUiProblem: ProblemSplitSectionContent = {
   id: "generative-ui",
   navLabel: "Gen UI / 01",
-  title: "我为什么开始补自然语言之外的交互形式",
+  title: "自然语言之外的交互形式",
   kicker: "Generative UI / Page 1",
   pageType: "problemSplit",
   tone: "sage",
   variant: "matrix",
-  lead: "我在做 Deskhand 的过程中越来越明显地感觉到，很多 AI 任务的问题不是模型不够强，而是用户很多时候并不知道怎么用自然语言把需求表达清楚。",
+  lead: "用Deskhand时体会到：AI任务问题不是模型不够强，而是我说不清。",
   paragraphs: [
-    "但真实高频场景里，很多任务是探索性的。用户还没想清楚方向，文字描述也不稳定，长 prompt 往往无法稳定收敛到高质量结果。",
-    "在内容创作、SEO、简历编写、原型设计这类“先探索、再收敛”的任务里，问题不只是模型能力，而是交互形式不对。"
+    "真实高频场景里，很多任务是探索性的。使用者还没想清楚方向，文字描述也不稳定，长 prompt 往往无法稳定收敛到高质量结果。",
+    '在内容创作、SEO、简历编写、原型设计这类"先探索、再收敛"的任务里，问题不只是模型能力，而是交互形式不对。'
   ],
   signal: {
     title: "我看到的变化",
-    body: "我在 Twitter 和开发者社区里越来越频繁地看到，社区和创作者会主动用 Interview 式提问、Playground 式探索来帮助用户收敛方向，因为很多任务本来就不是一句 prompt 能说清楚的。"
+    body: "我在 Twitter 和开发者社区里越来越频繁地看到，社区和创作者分享自己在创作前会主动用 Interview 式提问、Playground 式探索"
   },
   toolIntro:
-    "所以我开始补三种非自然语言交互，让用户通过选择、比较和探索来表达意图。",
+    "所以我开始补三种非自然语言交互，让用户通过选择、比较，与AI协同创作。",
   toolCards: [
     {
       title: "Brainstorm",
@@ -73,14 +73,14 @@ export const generativeUiSolution: ShowcaseSectionContent = {
       src: "/images/genui-playground-2026-03-09.png",
       alt: "Playground 功能完整产品截图，展示侧边栏、对话区与 Artifact 面板",
       title: "Playground",
-      caption: "通过可交互原型并排比较，用“偏好”替代“长 prompt”。",
+      caption: "有多个原型选择，支持调节参数化细化偏好，最后实时预览",
       size: "feature"
     },
     {
       src: "/images/genui-this-or-that-2026-03-09.png",
       alt: "This or That 功能截图，突出 Artifact 区域中的二选一结果",
       title: "This or That",
-      caption: "快速二选一，把模糊偏好持续压缩为可执行方向。",
+      caption: "快速二选一，通过多轮淘汰赛，把模糊偏好持续压缩为准确方向。",
       size: "support"
     }
   ]
@@ -93,7 +93,10 @@ export const generativeUiArchitecture: ArchitectureSectionContent = {
   kicker: "Generative UI / Page 3",
   pageType: "architecture",
   tone: "copper",
+  layout: "diagramFocus",
+  imageFrame: "wide",
   lead: "上一页的 Playground 和 This or That 背后，是一套让 Agent 按需生成交互式 UI，并把用户选择回流到对话的闭环系统。",
+  decisionTitle: "关键工程决策",
   image: {
     src: "/images/genui-architecture-2026-03-09.png",
     alt: "Generative UI 架构流程图，展示上下文输入、Agent 处理、Artifact 生成与安全边界"
@@ -101,7 +104,7 @@ export const generativeUiArchitecture: ArchitectureSectionContent = {
   decisions: [
     {
       title: "用户主动触发",
-      body: "测试后发现 Agent 很难准确判断“用户表达困难”的时机，所以最终改为菜单触发，让用户决定是否进入探索模式。"
+      body: "Agent 难以判断「用户表达困难」的时机，改为菜单触发，由用户决定是否进入探索模式。"
     },
     {
       title: "JSON Schema 约束",
@@ -112,8 +115,8 @@ export const generativeUiArchitecture: ArchitectureSectionContent = {
       body: "iframe sandbox 禁止脚本执行、网络请求和 Node.js 访问，所有文件操作通过受控 IPC 完成。"
     },
     {
-      title: "架构演化",
-      body: "方案经历了纯 JSON、纯 HTML、再到 JSON + HTML 混合，最终落在稳定性和表达力的平衡点上。"
+      title: "配置驱动生成",
+      body: "预设框架和模板，AI 像填配置表一样输出 JSON，仅少量部分写 HTML。token 从 2000+ 降到 400+，耗时缩短超三分之二。"
     }
   ]
 };
