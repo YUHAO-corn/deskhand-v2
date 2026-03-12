@@ -1,0 +1,188 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+  gap: 14px;
+  height: 100%;
+  min-height: 0;
+}
+
+.copyColumn,
+.matrixColumn {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 0;
+}
+
+.thesisCard,
+.principleCard,
+.matrixCard,
+.ruleCard {
+  border-radius: 24px;
+  border: 1px solid rgba(116, 99, 74, 0.16);
+  background: rgba(255, 252, 247, 0.72);
+}
+
+.thesisCard,
+.matrixCard,
+.ruleCard {
+  padding: 18px;
+}
+
+.thesisCard h3 {
+  margin: 0 0 10px;
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: 1.32rem;
+}
+
+.thesisCard p,
+.principleCard p,
+.ruleText {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  font-size: 0.88rem;
+}
+
+.principles {
+  display: grid;
+  gap: 10px;
+}
+
+.principleCard {
+  padding: 14px;
+}
+
+.principleCard strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.matrixTitle,
+.ruleLabel {
+  margin: 0 0 12px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.table th,
+.table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(116, 99, 74, 0.12);
+  vertical-align: top;
+}
+
+.table thead th {
+  text-align: left;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.table tbody th {
+  width: 148px;
+  text-align: left;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.table td {
+  color: var(--ink-soft);
+}
+
+.best {
+  color: #184741;
+  background: rgba(29, 103, 95, 0.12);
+}
+
+.ruleCard {
+  background: linear-gradient(180deg, rgba(29, 103, 95, 0.12), rgba(255, 252, 247, 0.78));
+}
+
+.ruleTags {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ruleTags span {
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(116, 99, 74, 0.14);
+  background: rgba(255, 252, 247, 0.84);
+  color: var(--ink);
+  font-size: 0.76rem;
+}
+
+:global([data-tone="ink"]) .thesisCard,
+:global([data-tone="ink"]) .principleCard,
+:global([data-tone="ink"]) .matrixCard,
+:global([data-tone="ink"]) .ruleCard {
+  border-color: rgba(236, 224, 207, 0.12);
+  background: rgba(255, 249, 240, 0.06);
+}
+
+:global([data-tone="ink"]) .thesisCard p,
+:global([data-tone="ink"]) .principleCard p,
+:global([data-tone="ink"]) .ruleText,
+:global([data-tone="ink"]) .table td {
+  color: rgba(243, 235, 223, 0.8);
+}
+
+:global([data-tone="ink"]) .principleCard strong,
+:global([data-tone="ink"]) .table tbody th {
+  color: #f4ebdd;
+}
+
+:global([data-tone="ink"]) .matrixTitle,
+:global([data-tone="ink"]) .ruleLabel {
+  color: #9fd2c9;
+}
+
+:global([data-tone="ink"]) .table th,
+:global([data-tone="ink"]) .table td {
+  border-bottom-color: rgba(236, 224, 207, 0.1);
+}
+
+:global([data-tone="ink"]) .table thead th {
+  color: rgba(243, 235, 223, 0.76);
+}
+
+:global([data-tone="ink"]) .best {
+  color: #d8fff5;
+  background: rgba(29, 103, 95, 0.14);
+}
+
+:global([data-tone="ink"]) .ruleCard {
+  background: linear-gradient(180deg, rgba(29, 103, 95, 0.2), rgba(255, 249, 240, 0.06));
+}
+
+:global([data-tone="ink"]) .ruleTags span {
+  border-color: rgba(236, 224, 207, 0.14);
+  background: rgba(255, 249, 240, 0.06);
+  color: #f4ebdd;
+}
+
+@media (max-width: 920px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+}
