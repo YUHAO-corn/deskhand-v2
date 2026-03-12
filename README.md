@@ -31,6 +31,29 @@ npm run build
 npm run preview
 ```
 
+## 部署到 GitHub Pages
+
+仓库里已经添加了 GitHub Actions 工作流：[.github/workflows/deploy.yml](/Users/godcorn/cursor/ppt/deskhand-v2/.github/workflows/deploy.yml)。
+
+使用方式：
+
+```bash
+git add .
+git commit -m "Add GitHub Pages deployment"
+git push origin main
+```
+
+然后到 GitHub 仓库页面确认以下设置：
+
+- `Settings -> Pages`
+- `Source` 选择 `GitHub Actions`
+
+说明：
+
+- 如果仓库地址是 `https://github.com/<user>/<repo>`，站点地址会是 `https://<user>.github.io/<repo>/`
+- 工作流会在推送到 `main` 分支后自动构建并发布
+- `vite.config.ts` 已在 GitHub Actions 环境下自动使用仓库名作为 `base`，本地开发仍保持根路径 `/`
+
 ## 工程结构
 
 ```text
