@@ -1,0 +1,203 @@
+.layout {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  height: 100%;
+  min-height: 0;
+  padding: clamp(12px, 1.5vw, 20px) 0 clamp(18px, 2.2vw, 28px);
+  gap: 10px;
+}
+
+.headerBlock {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.titleBlock {
+  display: grid;
+  gap: 2px;
+}
+
+.titleBlock h2 {
+  margin: 0;
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: clamp(2.18rem, 4.55vw, 4.3rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+  color: #1f2724;
+}
+
+.spectrumWrap {
+  position: relative;
+  display: grid;
+  align-content: center;
+  gap: 20px;
+  min-height: 0;
+  padding: clamp(20px, 5vh, 54px) 0 0;
+}
+
+.spectrumWrap::before {
+  content: "";
+  position: absolute;
+  inset: clamp(56px, 10vh, 94px) 8% auto;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(127, 107, 83, 0.15),
+    rgba(127, 107, 83, 0.48) 18%,
+    rgba(29, 103, 95, 0.7) 50%,
+    rgba(127, 107, 83, 0.48) 82%,
+    rgba(127, 107, 83, 0.15)
+  );
+  opacity: 0.9;
+}
+
+.spectrumRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 32px;
+  padding-top: 10px;
+}
+
+.edgeLabel {
+  display: grid;
+  gap: 8px;
+  max-width: 14rem;
+  position: relative;
+  z-index: 1;
+}
+
+.edgeLabel strong,
+.centerCluster em {
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-style: normal;
+  font-size: clamp(1.18rem, 1.9vw, 1.62rem);
+  line-height: 1.02;
+  color: #1b2521;
+}
+
+.edgeLabel span,
+.centerNote {
+  font-size: 0.86rem;
+  line-height: 1.38;
+  color: var(--ink-soft);
+}
+
+.edgeLabelRight {
+  text-align: right;
+  justify-self: end;
+}
+
+.centerCluster {
+  position: relative;
+  justify-items: center;
+  display: grid;
+  gap: 8px;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.centerDot {
+  position: relative;
+  z-index: 2;
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #246e63, #164841);
+  box-shadow:
+    0 0 0 8px rgba(29, 103, 95, 0.08),
+    0 12px 22px rgba(21, 81, 73, 0.14);
+}
+
+.centerStem {
+  width: 1px;
+  height: 42px;
+  background: linear-gradient(180deg, rgba(29, 103, 95, 0.86), rgba(29, 103, 95, 0.1));
+}
+
+.centerCluster em {
+  letter-spacing: 0.02em;
+  color: #214c45;
+}
+
+.centerNote {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.closingLine {
+  margin: 0;
+  justify-self: center;
+  padding-top: 6px;
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: clamp(1.18rem, 1.75vw, 1.52rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #4a5752;
+}
+
+@media (max-width: 920px) {
+  .layout {
+    gap: 22px;
+  }
+
+  .spectrumWrap::before {
+    inset: 12px auto 74px 11px;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(
+      180deg,
+      rgba(127, 107, 83, 0.15),
+      rgba(127, 107, 83, 0.48) 18%,
+      rgba(29, 103, 95, 0.7) 50%,
+      rgba(127, 107, 83, 0.48) 82%,
+      rgba(127, 107, 83, 0.15)
+    );
+    transform: none;
+  }
+
+  .spectrumWrap {
+    padding-top: 4px;
+    gap: 18px;
+  }
+
+  .spectrumRow {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-left: 28px;
+  }
+
+  .edgeLabel,
+  .edgeLabelRight,
+  .centerCluster {
+    text-align: left;
+    justify-items: start;
+  }
+
+  .edgeLabel {
+    max-width: none;
+  }
+
+  .centerCluster {
+    padding-left: 28px;
+    padding-top: 2px;
+    gap: 6px;
+  }
+
+  .closingLine {
+    justify-self: start;
+    padding-left: 28px;
+  }
+}
