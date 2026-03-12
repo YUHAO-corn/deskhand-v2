@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
+  <title id="title">Deskhand Logic Chart Refined</title>
+  <desc id="desc">Refined standalone mindmap asset for Deskhand with natural continuous curves and restrained editorial styling.</desc>
+  <defs>
+    <radialGradient id="rootGlow" cx="34%" cy="50%" r="58%">
+      <stop offset="0%" stop-color="rgba(29,103,95,0.14)"/>
+      <stop offset="46%" stop-color="rgba(29,103,95,0.06)"/>
+      <stop offset="100%" stop-color="rgba(29,103,95,0)"/>
+    </radialGradient>
+    <style>
+      .root-title {
+        fill: #1d675f;
+        font-family: "Fraunces", "Noto Serif SC", serif;
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+      }
+      .root-subtitle {
+        fill: rgba(70, 81, 75, 0.76);
+        font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+      }
+      .main-label {
+        fill: #1f2522;
+        font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      .main-label.emphasis {
+        fill: #1d675f;
+      }
+      .sub-label {
+        fill: rgba(55, 64, 60, 0.88);
+        font-family: "IBM Plex Sans", "Noto Sans SC", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .sub-label.emphasis {
+        fill: #1f524b;
+        font-weight: 600;
+      }
+      .trunk {
+        fill: none;
+        stroke: rgba(29, 103, 95, 0.84);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3;
+      }
+      .main-run {
+        fill: none;
+        stroke: rgba(29, 103, 95, 0.84);
+        stroke-linecap: round;
+        stroke-width: 2.8;
+      }
+      .main-run.muted {
+        stroke: rgba(95, 115, 108, 0.72);
+      }
+      .sub-curve {
+        fill: none;
+        stroke: rgba(29, 103, 95, 0.78);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.2;
+      }
+      .sub-curve.muted {
+        stroke: rgba(113, 128, 122, 0.56);
+        stroke-width: 1.9;
+      }
+      .sub-run {
+        fill: none;
+        stroke: rgba(29, 103, 95, 0.78);
+        stroke-linecap: round;
+        stroke-width: 2;
+      }
+      .sub-run.muted {
+        stroke: rgba(113, 128, 122, 0.52);
+        stroke-width: 1.7;
+      }
+    </style>
+  </defs>
+
+  <g>
+    <ellipse cx="214" cy="392" rx="124" ry="116" fill="url(#rootGlow)"/>
+    <text class="root-title" x="54" y="398">Deskhand</text>
+    <text class="root-subtitle" x="58" y="422">桌面智能体客户端</text>
+    <circle cx="210" cy="390" r="4.5" fill="rgba(29, 103, 95, 0.9)" />
+  </g>
+
+  <g>
+    <path class="trunk" d="M 210 390 C 256 390, 258 134, 304 134" />
+    <path class="main-run" d="M 304 134 L 500 134" />
+    <text class="main-label" x="366" y="126">核心交互</text>
+
+    <path class="sub-curve muted" d="M 500 134 C 526 134, 530 96, 558 96" />
+    <path class="sub-run muted" d="M 558 96 L 892 96" />
+    <text class="sub-label" x="570" y="84">多会话管理与持久化</text>
+
+    <path class="sub-curve muted" d="M 500 134 C 526 134, 530 136, 558 136" />
+    <path class="sub-run muted" d="M 558 136 L 892 136" />
+    <text class="sub-label" x="570" y="124">流式对话输出</text>
+
+    <path class="sub-curve muted" d="M 500 134 C 526 134, 530 176, 558 176" />
+    <path class="sub-run muted" d="M 558 176 L 892 176" />
+    <text class="sub-label" x="570" y="164">Artifact 面板（代码 / HTML / 文件）</text>
+
+    <path class="sub-curve muted" d="M 500 134 C 526 134, 530 216, 558 216" />
+    <path class="sub-run muted" d="M 558 216 L 892 216" />
+    <text class="sub-label" x="570" y="204">输入工具栏</text>
+  </g>
+
+  <g>
+    <path class="trunk" d="M 210 390 C 256 390, 258 306, 304 306" />
+    <path class="main-run" d="M 304 306 L 470 306" />
+    <text class="main-label" x="366" y="298">Agent 引擎</text>
+
+    <path class="sub-curve muted" d="M 470 306 C 496 306, 500 266, 528 266" />
+    <path class="sub-run muted" d="M 528 266 L 892 266" />
+    <text class="sub-label" x="540" y="254">Claude Agent SDK 封装</text>
+
+    <path class="sub-curve muted" d="M 470 306 C 496 306, 500 306, 528 306" />
+    <path class="sub-run muted" d="M 528 306 L 892 306" />
+    <text class="sub-label" x="540" y="294">工具调用与事件流</text>
+
+    <path class="sub-curve muted" d="M 470 306 C 496 306, 500 346, 528 346" />
+    <path class="sub-run muted" d="M 528 346 L 892 346" />
+    <text class="sub-label" x="540" y="334">活动树可视化</text>
+
+    <path class="sub-curve muted" d="M 470 306 C 496 306, 500 386, 528 386" />
+    <path class="sub-run muted" d="M 528 386 L 892 386" />
+    <text class="sub-label" x="540" y="374">权限控制（Ask / Auto）</text>
+
+    <path class="sub-curve muted" d="M 470 306 C 496 306, 500 426, 528 426" />
+    <path class="sub-run muted" d="M 528 426 L 892 426" />
+    <text class="sub-label" x="540" y="414">MCP 工具集成</text>
+  </g>
+
+  <g>
+    <path class="trunk" d="M 210 390 C 256 390, 258 520, 304 520" />
+    <path class="main-run" d="M 304 520 L 464 520" />
+    <text class="main-label emphasis" x="366" y="512">扩展能力</text>
+
+    <path class="sub-curve" d="M 464 520 C 490 520, 494 478, 522 478" />
+    <path class="sub-run" d="M 522 478 L 892 478" />
+    <text class="sub-label emphasis" x="534" y="466">Skill 系统与 Insight</text>
+
+    <path class="sub-curve" d="M 464 520 C 490 520, 494 520, 522 520" />
+    <path class="sub-run" d="M 522 520 L 892 520" />
+    <text class="sub-label emphasis" x="534" y="508">Generative UI（Playground / This or That）</text>
+
+    <path class="sub-curve" d="M 464 520 C 490 520, 494 562, 522 562" />
+    <path class="sub-run" d="M 522 562 L 892 562" />
+    <text class="sub-label emphasis" x="534" y="550">剪贴板感知与历史</text>
+  </g>
+
+  <g>
+    <path class="trunk" d="M 210 390 C 256 390, 258 674, 304 674" />
+    <path class="main-run muted" d="M 304 674 L 458 674" />
+    <text class="main-label" x="366" y="666">本地能力</text>
+
+    <path class="sub-curve muted" d="M 458 674 C 484 674, 488 632, 516 632" />
+    <path class="sub-run muted" d="M 516 632 L 892 632" />
+    <text class="sub-label" x="528" y="620">工作目录与文件附件</text>
+
+    <path class="sub-curve muted" d="M 458 674 C 484 674, 488 674, 516 674" />
+    <path class="sub-run muted" d="M 516 674 L 892 674" />
+    <text class="sub-label" x="528" y="662">设置与 API 配置</text>
+  </g>
+</svg>
