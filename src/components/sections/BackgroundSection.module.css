@@ -1,0 +1,176 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(19.8rem, 0.8fr) minmax(0, 1px) minmax(0, 1.58fr);
+  gap: clamp(16px, 2vw, 28px);
+  align-items: center;
+  height: 100%;
+  min-height: 0;
+  padding: clamp(34px, 4vw, 54px) clamp(16px, 2vw, 24px) clamp(28px, 3vw, 38px);
+}
+
+.prose {
+  display: grid;
+  gap: 0;
+  align-content: center;
+  min-height: 0;
+  padding: clamp(16px, 2.4vh, 24px) 0;
+}
+
+.kicker {
+  margin: 0 0 clamp(24px, 3vh, 30px);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.kicker::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 1px;
+  margin-top: 12px;
+  background: rgba(29, 103, 95, 0.32);
+}
+
+.copy {
+  display: grid;
+  gap: clamp(14px, 1.8vh, 20px);
+}
+
+.paragraph {
+  margin: 0;
+  max-width: 22.8rem;
+  font-size: clamp(0.94rem, 1.02vw, 1.04rem);
+  line-height: 1.68;
+  letter-spacing: 0.003em;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.paragraphLead {
+  color: rgba(31, 37, 34, 0.94);
+  font-weight: 500;
+}
+
+.closingParagraph {
+  display: grid;
+  gap: 0.34rem;
+  margin: clamp(22px, 2.6vh, 28px) 0 0;
+}
+
+.closingLead,
+.closingFollowup {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  font-size: clamp(0.92rem, 1vw, 0.98rem);
+  font-weight: 600;
+  line-height: 1.42;
+}
+
+.closingLead {
+  color: var(--sage);
+}
+
+.closingLead::after {
+  content: "→";
+  margin-left: 0.5rem;
+  font-size: 0.9em;
+}
+
+.closingFollowup {
+  color: var(--ink);
+}
+
+.divider {
+  align-self: stretch;
+  width: 1px;
+  margin-block: clamp(30px, 5vh, 48px);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(117, 103, 83, 0),
+      rgba(117, 103, 83, 0.08) 14%,
+      rgba(117, 103, 83, 0.16) 48%,
+      rgba(117, 103, 83, 0.08) 84%,
+      rgba(117, 103, 83, 0)
+    );
+}
+
+.mapShell {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  align-items: center;
+  padding: clamp(2px, 0.8vh, 8px) 0;
+}
+
+.mapShell::before {
+  content: "";
+  position: absolute;
+  inset: 18% 10% 14% 8%;
+  border-radius: 42px;
+  background:
+    radial-gradient(circle at 12% 52%, rgba(29, 103, 95, 0.07), transparent 34%),
+    radial-gradient(circle at 72% 22%, rgba(29, 103, 95, 0.035), transparent 28%);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.mindMap {
+  position: relative;
+  display: block;
+  width: 108%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  max-width: none;
+  margin-left: -3%;
+}
+
+@media (max-width: 1180px) {
+  .layout {
+    grid-template-columns: minmax(18.4rem, 0.82fr) minmax(0, 1px) minmax(0, 1.5fr);
+    gap: clamp(14px, 1.8vw, 22px);
+  }
+
+  .paragraph {
+    max-width: 21.6rem;
+    font-size: clamp(0.92rem, 0.98vw, 1rem);
+  }
+}
+
+@media (max-width: 920px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    height: auto;
+    padding: 52px 4px 10px;
+  }
+
+  .prose {
+    align-content: start;
+    padding: 0;
+  }
+
+  .paragraph {
+    max-width: 100%;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .mapShell {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+  }
+
+  .mindMap {
+    min-width: 760px;
+  }
+}
