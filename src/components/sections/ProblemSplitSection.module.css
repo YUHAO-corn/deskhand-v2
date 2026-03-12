@@ -1,0 +1,401 @@
+.matrixLayout,
+.chainLayout,
+.storiesLayout {
+  display: grid;
+  gap: 16px;
+  height: 100%;
+  min-height: 0;
+}
+
+.chainLayout,
+.storiesLayout {
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.matrixLayout {
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+}
+
+.copyColumn {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 0;
+}
+
+.paragraphs {
+  display: grid;
+  gap: 10px;
+}
+
+.paragraphs p,
+.signalCard p,
+.toolIntro,
+.toolCard p,
+.insightBody,
+.sidePane p,
+.storyCard p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.44;
+  font-size: 0.85rem;
+}
+
+.toolIntro {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.85rem;
+  line-height: 1.44;
+}
+
+.signalCard,
+.toolCard,
+.insightCard,
+.sidePane,
+.storyCard,
+.matrixPanel,
+.chainBoard {
+  border-radius: 22px;
+  border: 1px solid rgba(116, 99, 74, 0.16);
+  background: rgba(255, 250, 244, 0.76);
+  box-shadow: 0 14px 28px rgba(30, 26, 20, 0.06);
+}
+
+.signalCard {
+  padding: 14px 16px;
+}
+
+.signalCard strong,
+.toolCard strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--sage);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.toolGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.toolCard {
+  padding: 14px;
+}
+
+.matrixPanel {
+  min-height: 0;
+  padding: 18px;
+  background:
+    linear-gradient(180deg, rgba(254, 251, 247, 0.96), rgba(239, 246, 243, 0.88)),
+    rgba(255, 250, 244, 0.9);
+}
+
+.panelKicker {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.matrixPanel h3 {
+  margin: 10px 0 0;
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+}
+
+.matrixTable {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.matrixHead,
+.matrixRow {
+  display: grid;
+  grid-template-columns: 136px repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.axisEmpty,
+.axisHead,
+.rowHead,
+.matrixCell {
+  min-height: 72px;
+  border-radius: 18px;
+  border: 1px solid rgba(116, 99, 74, 0.14);
+  padding: 12px 14px;
+}
+
+.axisEmpty {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+}
+
+.axisHead {
+  min-height: 0;
+  padding-block: 10px;
+  background: rgba(246, 237, 227, 0.74);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.axisHead {
+  display: inline-flex;
+  align-items: center;
+}
+
+.rowHead {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: rgba(255, 252, 247, 0.88);
+}
+
+.matrixCell {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  background: rgba(255, 252, 247, 0.88);
+}
+
+.matrixCell p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+.matrixCellEmphasis {
+  background: linear-gradient(180deg, rgba(233, 247, 242, 0.94), rgba(250, 245, 237, 0.9));
+  border-color: rgba(29, 103, 95, 0.22);
+}
+
+.chainTop {
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+  gap: 12px;
+  min-height: 0;
+}
+
+.insightGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.insightCard {
+  padding: 14px;
+}
+
+.insightTitle {
+  margin: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.insightStat {
+  display: block;
+  margin-top: 10px;
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1;
+}
+
+.insightBody {
+  margin-top: 8px;
+}
+
+.tagRow {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tagRow span {
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(233, 247, 242, 0.86);
+  border: 1px solid rgba(29, 103, 95, 0.16);
+  font-size: 0.74rem;
+  color: #184741;
+}
+
+.chainBoard {
+  padding: 16px;
+  background:
+    linear-gradient(180deg, rgba(251, 248, 241, 0.96), rgba(239, 247, 244, 0.88)),
+    rgba(255, 252, 247, 0.92);
+}
+
+.chainHypothesis {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  color: #4f5e58;
+}
+
+.chainRows {
+  display: grid;
+  gap: 8px;
+}
+
+.chainRow {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(116, 99, 74, 0.14);
+  background: rgba(255, 252, 247, 0.86);
+}
+
+.chainCopy {
+  display: grid;
+  gap: 4px;
+}
+
+.chainRow strong {
+  font-size: 0.96rem;
+  line-height: 1.26;
+}
+
+.chainCopy p {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.82rem;
+  line-height: 1.36;
+}
+
+.chainRowNew {
+  background: linear-gradient(180deg, rgba(233, 247, 242, 0.92), rgba(250, 245, 237, 0.92));
+}
+
+.chainTag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(116, 99, 74, 0.18);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.chainTagNew {
+  border-color: rgba(29, 103, 95, 0.26);
+  background: rgba(233, 247, 242, 0.82);
+  color: #173f39;
+}
+
+.storiesGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.2fr) minmax(0, 0.98fr);
+  gap: 10px;
+  min-height: 0;
+  align-items: stretch;
+}
+
+.sidePane,
+.storyCard {
+  padding: 14px;
+}
+
+.sidePane h3,
+.storyCard h3 {
+  margin: 6px 0;
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.storyCardGrid {
+  display: grid;
+  gap: 8px;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  min-height: 0;
+}
+
+.storyCard {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+}
+
+.storyKicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+
+.solutionPane ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  display: grid;
+  gap: 6px;
+}
+
+.solutionPane li {
+  line-height: 1.4;
+  font-size: 0.84rem;
+}
+
+:global([data-tone="ink"]) .paragraphs p,
+:global([data-tone="ink"]) .insightBody,
+:global([data-tone="ink"]) .sidePane p,
+:global([data-tone="ink"]) .storyCard p {
+  color: rgba(243, 235, 223, 0.8);
+}
+
+:global([data-tone="ink"]) .insightCard,
+:global([data-tone="ink"]) .chainBoard,
+:global([data-tone="ink"]) .sidePane,
+:global([data-tone="ink"]) .storyCard {
+  background: rgba(255, 249, 240, 0.06);
+  border-color: rgba(236, 224, 207, 0.12);
+}
+
+:global([data-tone="ink"]) .chainRow {
+  background: rgba(255, 249, 240, 0.05);
+  border-color: rgba(236, 224, 207, 0.1);
+}
+
+:global([data-tone="ink"]) .insightStat,
+:global([data-tone="ink"]) .chainRow strong {
+  color: #f3ebdf;
+}
+
+@media (max-width: 920px) {
+  .matrixLayout,
+  .chainTop,
+  .storiesGrid,
+  .toolGrid,
+  .insightGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .matrixTable,
+  .matrixHead,
+  .matrixRow {
+    grid-template-columns: 1fr;
+  }
+
+  .chainRow {
+    grid-template-columns: 1fr;
+  }
+}
