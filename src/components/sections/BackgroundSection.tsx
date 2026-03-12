@@ -1,6 +1,7 @@
 import type { BackgroundSectionContent } from "../../types/content";
 import { SectionCanvas } from "../primitives/SectionCanvas";
 import styles from "./BackgroundSection.module.css";
+import { assetPath } from "../../utils/asset";
 
 interface BackgroundSectionProps {
   section: BackgroundSectionContent;
@@ -38,7 +39,7 @@ export function BackgroundSection({ section, index }: BackgroundSectionProps) {
           <img
             alt="Deskhand 结构导图"
             className={styles.mindMap}
-            src="/images/logic-chart-refined.svg"
+            src={assetPath("/images/logic-chart-refined.svg")}
           />
         </div>
       </div>

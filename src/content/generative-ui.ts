@@ -3,6 +3,7 @@ import type {
   ProblemSplitSectionContent,
   ShowcaseSectionContent
 } from "../types/content";
+import { assetPath } from "../utils/asset";
 
 export const generativeUiProblem: ProblemSplitSectionContent = {
   id: "generative-ui",
@@ -70,14 +71,14 @@ export const generativeUiSolution: ShowcaseSectionContent = {
   lead: "不用写长 prompt，用户通过选择、比较、调参来表达偏好，在交互中逐步收敛方向。",
   screens: [
     {
-      src: "/images/genui-playground-2026-03-09.png",
+      src: assetPath("/images/genui-playground-2026-03-09.png"),
       alt: "Playground 功能完整产品截图，展示侧边栏、对话区与 Artifact 面板",
       title: "Playground",
       caption: "有多个原型选择，支持调节参数化细化偏好，最后实时预览",
       size: "feature"
     },
     {
-      src: "/images/genui-this-or-that-2026-03-09.png",
+      src: assetPath("/images/genui-this-or-that-2026-03-09.png"),
       alt: "This or That 功能截图，突出 Artifact 区域中的二选一结果",
       title: "This or That",
       caption: "快速二选一，通过多轮淘汰赛，把模糊偏好持续压缩为准确方向。",
@@ -98,7 +99,7 @@ export const generativeUiArchitecture: ArchitectureSectionContent = {
   lead: "上一页的 Playground 和 This or That 背后，是一套让 Agent 按需生成交互式 UI，并把用户选择回流到对话的闭环系统。",
   decisionTitle: "关键工程决策",
   image: {
-    src: "/images/genui-architecture-2026-03-09.png",
+    src: assetPath("/images/genui-architecture-2026-03-09.png"),
     alt: "Generative UI 架构流程图，展示上下文输入、Agent 处理、Artifact 生成与安全边界"
   },
   decisions: [

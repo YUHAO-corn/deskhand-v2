@@ -1,4 +1,5 @@
 import type { HeroSectionContent } from "../types/content";
+import { assetPath } from "../utils/asset";
 
 export const heroSection: HeroSectionContent = {
   id: "hero",
@@ -24,7 +25,7 @@ export const heroSection: HeroSectionContent = {
     "Claude Agent SDK"
   ],
   image: {
-    src: "/images/deskhand-overview-2026-03-09.png",
+    src: assetPath("/images/deskhand-overview-2026-03-09.png"),
     alt: "Deskhand 桌面应用 overview 界面截图",
     size: "feature"
   }

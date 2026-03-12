@@ -1,4 +1,5 @@
 import styles from "./SiteHeader.module.css";
+import { assetPath } from "../../utils/asset";
 
 interface SiteHeaderProps {
   onOpenNav: () => void;
@@ -34,7 +35,7 @@ export function SiteHeader({ onOpenNav }: SiteHeaderProps) {
           </a>
           <a
             className={`${styles.linkChip} ${styles.linkStrong}`}
-            href="/Yuhao-Resume.pdf"
+            href={assetPath("/Yuhao-Resume.pdf")}
             download="Yuhao-Resume.pdf"
           >
             Download Resume

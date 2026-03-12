@@ -3,6 +3,7 @@ import type {
   ProblemSplitSectionContent,
   ShowcaseSectionContent
 } from "../types/content";
+import { assetPath } from "../utils/asset";
 
 export const clipboardProblem: ProblemSplitSectionContent = {
   id: "clipboard",
@@ -71,14 +72,14 @@ export const clipboardShowcase: ShowcaseSectionContent = {
   layout: "editorialBalanced",
   screens: [
     {
-      src: "/images/clipboard-1.png",
+      src: assetPath("/images/clipboard-1.png"),
       alt: "Clip Insight 功能截图，展示 AI 读取剪贴板历史分析工作轨迹并生成总结报告",
       title: "Clipboard-1",
       caption: "用户说“帮我统计最近一周的工作轨迹”，AI 自动读取剪贴板历史并生成结构化报告。",
       size: "feature"
     },
     {
-      src: "/images/clipboard-2.png",
+      src: assetPath("/images/clipboard-2.png"),
       alt: "剪贴板历史文件被 AI 引用和分析的任务执行截图",
       title: "Clipboard-2",
       caption: "拿到剪贴板历史后，Agent 不只还原了我的工作轨迹，还主动总结出工作特征和时间分布。真正让我惊喜的是这层额外洞察。",
@@ -99,7 +100,7 @@ export const clipboardArchitecture: ArchitectureSectionContent = {
   lead: "这套能力的关键，是让 AI 能稳定查询、筛选并读取真正有用的剪贴板历史。",
   decisionTitle: "关键工程决策",
   image: {
-    src: "/images/clipboard-architeture.png",
+    src: assetPath("/images/clipboard-architeture.png"),
     alt: "Clipboard 环境感知架构图，展示 query_env_context 与多个数据源的路由关系"
   },
   decisions: [

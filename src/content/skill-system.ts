@@ -3,6 +3,7 @@ import type {
   ProblemSplitSectionContent,
   ShowcaseSectionContent
 } from "../types/content";
+import { assetPath } from "../utils/asset";
 
 export const skillSystemProblem: ProblemSplitSectionContent = {
   id: "skill-system",
@@ -55,14 +56,14 @@ export const skillSystemShowcase: ShowcaseSectionContent = {
   lead: "用户在自然使用中，Agent 持续观察行为模式。当发现重复工作流时，主动搜索或生成匹配的 skill，并通过对话推荐安装。",
   screens: [
     {
-      src: "/images/skill-insight-2026-03-10.png",
+      src: assetPath("/images/skill-insight-2026-03-10.png"),
       alt: "Skill Insight 功能截图，展示 Agent 分析用户行为模式、搜索现成 skill 并输出推荐对话的完整闭环",
       title: "Skill Insight",
       caption: "Agent 分析历史 session，发现重复模式，主动搜索并推荐安装。用户一键确认，失败由 Agent 继续兜底。",
       size: "feature"
     },
     {
-      src: "/images/skill-list-2026-03-10.png",
+      src: assetPath("/images/skill-list-2026-03-10.png"),
       alt: "已安装 Skill 列表截图，展示能力池管理界面",
       title: "Skill 能力池",
       caption: "已安装能力可见、可管理，内置 skill 与用户自定义 skill 在运行时一视同仁。",
@@ -83,7 +84,7 @@ export const skillSystemArchitecture: ArchitectureSectionContent = {
   lead: "下面四个关键设计，决定了 Skill Insight 如何稳定运行，并进入真实对话链路。",
   decisionTitle: "关键工程决策",
   image: {
-    src: "/images/skill-system-architecture.png",
+    src: assetPath("/images/skill-system-architecture.png"),
     alt: "Skill System 架构流程图"
   },
   decisions: [
