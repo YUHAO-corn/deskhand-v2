@@ -1,0 +1,29 @@
+.shell {
+  position: relative;
+  z-index: 1;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  max-width: var(--page-max);
+  margin-left: calc(var(--nav-w) + 44px);
+  padding-top: calc(var(--header-h) + 14px);
+  padding-right: 24px;
+  padding-bottom: calc(var(--pager-h) + 20px);
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 29;
+  background: rgba(17, 22, 20, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 920px) {
+  .main {
+    margin-left: 0;
+    padding: calc(var(--header-h) + 10px) 14px calc(var(--pager-h) + 18px);
+  }
+}
