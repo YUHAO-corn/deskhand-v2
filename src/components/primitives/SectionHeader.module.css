@@ -1,0 +1,49 @@
+.header {
+  display: grid;
+  gap: 10px;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.title {
+  margin: 0;
+  font-family: "Fraunces", "Noto Serif SC", serif;
+  font-size: clamp(1.56rem, 2.6vw, 2.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  margin: 0;
+  max-width: 54rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.54;
+}
+
+.light .kicker {
+  color: #9fd2c9;
+}
+
+.light .lead {
+  color: rgba(243, 235, 223, 0.78);
+}
+
+:global([data-section="generative-ui"]) .title {
+  font-size: clamp(1.28rem, 1.7vw, 1.76rem);
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+@media (max-width: 920px) {
+  :global([data-section="generative-ui"]) .title {
+    white-space: normal;
+  }
+}
