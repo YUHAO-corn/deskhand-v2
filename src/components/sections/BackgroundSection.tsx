@@ -22,7 +22,7 @@ export function BackgroundSection({ section, index }: BackgroundSectionProps) {
           <div className={styles.copy}>
             {openingParagraphs.map((paragraph, paragraphIndex) => (
               <p className={styles.paragraph} key={paragraph}>
-                {paragraphIndex === 0 ? <span className={styles.paragraphLead}>{paragraph}</span> : paragraph}
+                {paragraphIndex === 2 ? <span className={styles.paragraphLead}>{paragraph}</span> : paragraph}
               </p>
             ))}
           </div>
