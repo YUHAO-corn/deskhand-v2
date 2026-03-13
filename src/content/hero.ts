@@ -9,7 +9,8 @@ export const heroSection: HeroSectionContent = {
   pageType: "hero",
   tone: "hero",
   eyebrow: "Product Thinking, Shipped in Code",
-  subtitle: "一个让非技术用户也能真正使用的 Claude Code 桌面应用。",
+  subtitle: "让非技术用户通过桌面端使用本地信息、工具和交互式界面解决问题",
+  author: "David Chen",
   metrics: [
     { label: "Commits", value: "247+" },
     { label: "Code Lines", value: "12k+" },

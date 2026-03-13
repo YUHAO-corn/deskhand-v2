@@ -13,6 +13,13 @@ export function HeroSection({ section, index }: HeroSectionProps) {
       <div className={styles.grid}>
         <div className={styles.copy}>
           <div className={styles.copyTop}>
+            {section.author ? (
+              <p className={styles.byline}>
+                {section.author}
+                <span className={styles.bylineDot} aria-hidden="true">·</span>
+                <span className={styles.bylineType}>{section.kicker}</span>
+              </p>
+            ) : null}
             <p className={styles.eyebrow}>{section.eyebrow}</p>
             <h1 className={styles.title}>{section.title}</h1>
             <p className={styles.subtitle}>{section.subtitle}</p>

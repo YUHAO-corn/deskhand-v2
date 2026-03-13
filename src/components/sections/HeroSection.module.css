@@ -19,8 +19,30 @@
   gap: 10px;
 }
 
-.eyebrow {
+.byline {
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+
+.bylineDot {
+  margin: 0 7px;
+  color: var(--copper);
+  font-weight: 700;
+}
+
+.bylineType {
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+
+.eyebrow {
+  margin: 4px 0 0;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.22em;

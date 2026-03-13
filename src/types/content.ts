@@ -34,6 +34,7 @@ export interface HeroSectionContent extends NavMeta {
   pageType: "hero";
   eyebrow: string;
   subtitle: string;
+  author?: string;
   summary?: string;
   note?: string;
   metrics: MetricItem[];
